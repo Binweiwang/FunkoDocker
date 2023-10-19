@@ -1,3 +1,148 @@
 
+g	java:S112F"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ÉîÛÑ´1
+g	java:S112["FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ÉîÛÑ´1
+g	java:S112t"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ÉîÛÑ´1
+h	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ÉîÛÑ´1
+h	java:S112¤"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ÉîÛÑ´1
+h	java:S112º"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ÉîÛÑ´1
+h	java:S112Ï"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ÉîÛÑ´1
+h	java:S112è"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ÉîÛÑ´1
+h	java:S112ÿ"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ÉîÛÑ´1
+L
+java:S3740O"/Provide the parametrized type for this generic.(‡“º´8ÉîÛÑ´1
+Q
+java:S3740d"/Provide the parametrized type for this generic.(ÅÄÈÿÿÿÿÿ8ÉîÛÑ´1
+L
+java:S3740h"/Provide the parametrized type for this generic.(‡“º´8ÉîÛÑ´1
+L
+java:S3740~"/Provide the parametrized type for this generic.(Íé€ã8ÉîÛÑ´1
+M
+java:S3740‚"/Provide the parametrized type for this generic.(‡“º´8ÉîÛÑ´1
+M
+java:S3740—"/Provide the parametrized type for this generic.(‡“º´8ÉîÛÑ´1
+M
+java:S3740­"/Provide the parametrized type for this generic.(‡“º´8ÉîÛÑ´1
+M
+java:S3740Ã"/Provide the parametrized type for this generic.(‡“º´8ÉîÛÑ´1
+R
+java:S3740Ó"/Provide the parametrized type for this generic.(¶œËÔûÿÿÿÿ8ÉîÛÑ´1
+M
+java:S3740Ü"/Provide the parametrized type for this generic.(‡“º´8ÉîÛÑ´1
+M
+java:S3740ò"/Provide the parametrized type for this generic.(‡“º´8ÉîÛÑ´1
+w
+java:S1192P"UDefine a constant instead of duplicating this literal "Respuesta recibida: " 8 times.(ÊŞºõüÿÿÿÿ8ÉîÛÑ´1
+i
+java:S11922"GDefine a constant instead of duplicating this literal "DISNEY" 3 times.(¸•ÄÓÿÿÿÿÿ8ÉîÛÑ´1
+
+java:S1192V"lDefine a constant instead of duplicating this literal "ğŸ”´ Error: Tipo de respuesta no esperado: " 8 times.(Ş®ôàøÿÿÿÿ8ÉîÛÑ´1
+q
+java:S1192L"TDefine a constant instead of duplicating this literal "PeticiÃ³n enviada: " 8 times.(ö®Âª8ÉîÛÑ´1
+T
+java:S2629L"7Use the built-in formatting to construct this argument.(ö®Âª8ÉîÛÑ´1
+Y
+java:S2629P"7Use the built-in formatting to construct this argument.(ÊŞºõüÿÿÿÿ8ÉîÛÑ´1
+T
+java:S2629e"7Use the built-in formatting to construct this argument.(ö®Âª8ÉîÛÑ´1
+Y
+java:S2629i"7Use the built-in formatting to construct this argument.(ÊŞºõüÿÿÿÿ8ÉîÛÑ´1
+T
+java:S2629"7Use the built-in formatting to construct this argument.(ö®Âª8ÉîÛÑ´1
+Z
+java:S2629ƒ"7Use the built-in formatting to construct this argument.(ÊŞºõüÿÿÿÿ8ÉîÛÑ´1
+U
+java:S2629”"7Use the built-in formatting to construct this argument.(ö®Âª8ÉîÛÑ´1
+Z
+java:S2629˜"7Use the built-in formatting to construct this argument.(ÊŞºõüÿÿÿÿ8ÉîÛÑ´1
+U
+java:S2629ª"7Use the built-in formatting to construct this argument.(ö®Âª8ÉîÛÑ´1
+Z
+java:S2629®"7Use the built-in formatting to construct this argument.(ÊŞºõüÿÿÿÿ8ÉîÛÑ´1
+U
+java:S2629À"7Use the built-in formatting to construct this argument.(ö®Âª8ÉîÛÑ´1
+Z
+java:S2629Ä"7Use the built-in formatting to construct this argument.(ÊŞºõüÿÿÿÿ8ÉîÛÑ´1
+U
+java:S2629Ù"7Use the built-in formatting to construct this argument.(ö®Âª8ÉîÛÑ´1
+Z
+java:S2629İ"7Use the built-in formatting to construct this argument.(ÊŞºõüÿÿÿÿ8ÉîÛÑ´1
+Z
+java:S2629ó"7Use the built-in formatting to construct this argument.(ÊŞºõüÿÿÿÿ8ÉîÛÑ´1
+v
+java:S1450!"TRemove the "token" field and declare it as a local variable in the relevant methods.(°É©ñÿÿÿÿÿ8†¬ÈÒ´1
+^
+java:S3457L"AFormat specifiers should be used instead of string concatenation.(ö®Âª8âîÛÑ´1
+c
+java:S3457P"AFormat specifiers should be used instead of string concatenation.(ÊŞºõüÿÿÿÿ8âîÛÑ´1
+9
+java:S6205R"Remove this redundant block.(»œšÍ8âîÛÑ´1
+>
+java:S6205U"Remove this redundant block.(ß×ùÙıÿÿÿÿ8âîÛÑ´1
+L	java:S106V"+Replace this use of System.err by a logger.(Ş®ôàøÿÿÿÿ8âîÛÑ´1
+Z
+java:S1117`"8Rename "gson" which hides the field declared at line 29.(ò—Í­üÿÿÿÿ8âîÛÑ´1
+^
+java:S3457e"AFormat specifiers should be used instead of string concatenation.(ö®Âª8âîÛÑ´1
+c
+java:S3457i"AFormat specifiers should be used instead of string concatenation.(ÊŞºõüÿÿÿÿ8âîÛÑ´1
+9
+java:S6205k"Remove this redundant block.(»œšÍ8âîÛÑ´1
+>
+java:S6205n"Remove this redundant block.(ß×ùÙıÿÿÿÿ8âîÛÑ´1
+L	java:S106o"+Replace this use of System.err by a logger.(Ş®ôàøÿÿÿÿ8âîÛÑ´1
+Z
+java:S1117z"8Rename "gson" which hides the field declared at line 29.(ò—Í­üÿÿÿÿ8âîÛÑ´1
+^
+java:S3457"AFormat specifiers should be used instead of string concatenation.(ö®Âª8âîÛÑ´1
+d
+java:S3457ƒ"AFormat specifiers should be used instead of string concatenation.(ÊŞºõüÿÿÿÿ8âîÛÑ´1
+:
+java:S6205…"Remove this redundant block.(»œšÍ8âîÛÑ´1
+?
+java:S6205ˆ"Remove this redundant block.(ß×ùÙıÿÿÿÿ8âîÛÑ´1
+M	java:S106‰"+Replace this use of System.err by a logger.(Ş®ôàøÿÿÿÿ8æîÛÑ´1
 _
-java:S2094"BRemove this empty class, write its code or make it an "interface".(ñ·ÍŸ8 ÀÙ·´1
+java:S3457”"AFormat specifiers should be used instead of string concatenation.(ö®Âª8æîÛÑ´1
+d
+java:S3457˜"AFormat specifiers should be used instead of string concatenation.(ÊŞºõüÿÿÿÿ8æîÛÑ´1
+:
+java:S6205š"Remove this redundant block.(»œšÍ8æîÛÑ´1
+?
+java:S6205"Remove this redundant block.(ß×ùÙıÿÿÿÿ8æîÛÑ´1
+M	java:S106"+Replace this use of System.err by a logger.(Ş®ôàøÿÿÿÿ8æîÛÑ´1
+_
+java:S3457ª"AFormat specifiers should be used instead of string concatenation.(ö®Âª8æîÛÑ´1
+d
+java:S3457®"AFormat specifiers should be used instead of string concatenation.(ÊŞºõüÿÿÿÿ8æîÛÑ´1
+:
+java:S6205°"Remove this redundant block.(»œšÍ8æîÛÑ´1
+?
+java:S6205³"Remove this redundant block.(ß×ùÙıÿÿÿÿ8æîÛÑ´1
+M	java:S106´"+Replace this use of System.err by a logger.(Ş®ôàøÿÿÿÿ8æîÛÑ´1
+_
+java:S3457À"AFormat specifiers should be used instead of string concatenation.(ö®Âª8æîÛÑ´1
+d
+java:S3457Ä"AFormat specifiers should be used instead of string concatenation.(ÊŞºõüÿÿÿÿ8êîÛÑ´1
+:
+java:S6205Æ"Remove this redundant block.(»œšÍ8êîÛÑ´1
+?
+java:S6205É"Remove this redundant block.(ß×ùÙıÿÿÿÿ8êîÛÑ´1
+M	java:S106Ê"+Replace this use of System.err by a logger.(Ş®ôàøÿÿÿÿ8êîÛÑ´1
+H	java:S106Ô"+Replace this use of System.out by a logger.(ÙäÏó8êîÛÑ´1
+_
+java:S3457Ù"AFormat specifiers should be used instead of string concatenation.(ö®Âª8ëîÛÑ´1
+d
+java:S3457İ"AFormat specifiers should be used instead of string concatenation.(ÊŞºõüÿÿÿÿ8ëîÛÑ´1
+:
+java:S6205ß"Remove this redundant block.(»œšÍ8ëîÛÑ´1
+?
+java:S6205â"Remove this redundant block.(ß×ùÙıÿÿÿÿ8ëîÛÑ´1
+M	java:S106ã"+Replace this use of System.err by a logger.(Ş®ôàøÿÿÿÿ8ëîÛÑ´1
+M	java:S106ï"+Replace this use of System.out by a logger.(°•¢šûÿÿÿÿ8ëîÛÑ´1
+d
+java:S3457ó"AFormat specifiers should be used instead of string concatenation.(ÊŞºõüÿÿÿÿ8ëîÛÑ´1
+M	java:S106ö"+Replace this use of System.out by a logger.(‹‰ÆÁûÿÿÿÿ8ëîÛÑ´1
+?
+java:S6205ù"Remove this redundant block.(ß×ùÙıÿÿÿÿ8ëîÛÑ´1
+M	java:S106ú"+Replace this use of System.err by a logger.(Ş®ôàøÿÿÿÿ8ëîÛÑ´1
+M	java:S106†"+Replace this use of System.out by a logger.(æüşÊùÿÿÿÿ8ëîÛÑ´1

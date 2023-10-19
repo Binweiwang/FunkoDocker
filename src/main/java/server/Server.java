@@ -33,7 +33,7 @@ public class Server {
                     }
             }
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            throw new RuntimeException("Error: " + e.getMessage());
         }finally {
             DatabaseManager.getInstance().close();
         }

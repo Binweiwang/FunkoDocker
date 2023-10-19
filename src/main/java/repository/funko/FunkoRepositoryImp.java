@@ -44,6 +44,7 @@ public class FunkoRepositoryImp implements FunkoRepository {
 
     private static Funko getFunko(Row row) {
         return getFunko(Funko.builder()
+                .id(row.get("id", Long.class))
                 .cod(row.get("cod", UUID.class))
                 .nombre(row.get("nombre", String.class))
                 .modelo(row.get("modelo", String.class))
@@ -170,7 +171,7 @@ public class FunkoRepositoryImp implements FunkoRepository {
     @Override
     public Mono<Funko> update(Funko funko) {
         logger.debug("Actualizando funko: " + funko);
-        String sql = "UPDATE FUNKOS SET nombre = ?, modelo = ?, precio = ? WHERE cod = ?";
+        String sql = "UPDATE FUNKOS SET nombre = ?, modelo = ?, precio = ?, FECHA_LANZAMIENTO = ? WHERE id = ?";
         return Mono.usingWhen(
                 connectionFactory.create(),
                 connection -> Mono.from(connection.createStatement(sql)
@@ -178,7 +179,7 @@ public class FunkoRepositoryImp implements FunkoRepository {
                         .bind(1, funko.getModelo())
                         .bind(2, funko.getPrecio())
                         .bind(3, funko.getFecha_lanzamiento())
-                        .bind(4, funko.getCod())
+                        .bind(4, funko.getId())
                         .execute()
                 ).then(Mono.just(funko)),
                 Connection::close
