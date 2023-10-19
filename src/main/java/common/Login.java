@@ -1,2 +1,5 @@
-package common;public record Login() {
+package common;
+
+public record Login(String username, String password) {
+
 }

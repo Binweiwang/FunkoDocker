@@ -1,0 +1,41 @@
+
+t
+java:S1192+"RDefine a constant instead of duplicating this literal "fecha_lanzamiento" 5 times.(åÎöµøÿÿÿÿ8Š©Šº´1
+i
+java:S1192)"GDefine a constant instead of duplicating this literal "modelo" 5 times.(£€µ¡ùÿÿÿÿ8Š©Šº´1
+i
+java:S1192("GDefine a constant instead of duplicating this literal "nombre" 5 times.(ªçÊºÿÿÿÿÿ8Š©Šº´1
+d
+java:S1192*"GDefine a constant instead of duplicating this literal "precio" 5 times.(ïù÷8Š©Šº´1
+T
+java:S26294"7Use the built-in formatting to construct this argument.(øë”8‹©Šº´1
+T
+java:S2629J"7Use the built-in formatting to construct this argument.(‚ê¼§8‹©Šº´1
+Y
+java:S2629^"7Use the built-in formatting to construct this argument.(’¸ÆÆùÿÿÿÿ8‹©Šº´1
+Y
+java:S2629t"7Use the built-in formatting to construct this argument.(ûÌÏùÿÿÿÿ8‹©Šº´1
+U
+java:S2629‚"7Use the built-in formatting to construct this argument.(Ó˜´¶8›ó¸¿´1
+U
+java:S2629™"7Use the built-in formatting to construct this argument.(÷èºÀ8‹©Šº´1
+T
+java:S2629«"7Use the built-in formatting to construct this argument.(üÈ±I8‹©Šº´1
+U
+java:S2629½"7Use the built-in formatting to construct this argument.(ğ¾¾Ÿ8‹©Šº´1
+^
+java:S34574"AFormat specifiers should be used instead of string concatenation.(øë”8™©Šº´1
+^
+java:S3457J"AFormat specifiers should be used instead of string concatenation.(‚ê¼§8›©Šº´1
+c
+java:S3457^"AFormat specifiers should be used instead of string concatenation.(’¸ÆÆùÿÿÿÿ8©Šº´1
+c
+java:S3457t"AFormat specifiers should be used instead of string concatenation.(ûÌÏùÿÿÿÿ8Ÿ©Šº´1
+_
+java:S3457‚"AFormat specifiers should be used instead of string concatenation.(Ó˜´¶8°ó¸¿´1
+_
+java:S3457™"AFormat specifiers should be used instead of string concatenation.(÷èºÀ8 ©Šº´1
+^
+java:S3457«"AFormat specifiers should be used instead of string concatenation.(üÈ±I8¡©Šº´1
+_
+java:S3457½"AFormat specifiers should be used instead of string concatenation.(ğ¾¾Ÿ8£©Šº´1

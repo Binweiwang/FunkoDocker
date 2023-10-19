@@ -1,15 +1,11 @@
 
 T
-java:S26299"7Use the built-in formatting to construct this argument.(ğÀË8§ñÌ¦´1
+java:S26297"7Use the built-in formatting to construct this argument.(ğÀË8£Ù˜¸´1
 »
-java:S6548"˜A Singleton implementation was detected. Make sure the use of the Singleton pattern is required and the implementation is the right one for the context.( ùÓ‹ÿÿÿÿÿ8¯ñÌ¦´1
+java:S6548"˜A Singleton implementation was detected. Make sure the use of the Singleton pattern is required and the implementation is the right one for the context.( ùÓ‹ÿÿÿÿÿ8»Ù˜¸´1
 ^
-java:S34579"AFormat specifiers should be used instead of string concatenation.(ğÀË8´ñÌ¦´1
-j
-java:S1128"NRemove this unused import 'dev.miku.r2dbc.mysql.MySqlConnectionConfiguration'.(¤éùF8·ñÌ¦´1
-e
-java:S1128"HRemove this unused import 'dev.miku.r2dbc.mysql.MySqlConnectionFactory'.(—öğ8·ñÌ¦´1
+java:S34577"AFormat specifiers should be used instead of string concatenation.(ğÀË8ÅÙ˜¸´1
 R
-java:S1068"0Remove this unused "databaseUser" private field.(Á ¿‰ùÿÿÿÿ8·ñÌ¦´1
+java:S1068"0Remove this unused "databaseUser" private field.(Á ¿‰ùÿÿÿÿ8ÒÙ˜¸´1
 R
-java:S1068"0Remove this unused "databasePass" private field.(¥ÿä™ÿÿÿÿÿ8·ñÌ¦´1
+java:S1068"0Remove this unused "databasePass" private field.(¥ÿä™ÿÿÿÿÿ8ÓÙ˜¸´1

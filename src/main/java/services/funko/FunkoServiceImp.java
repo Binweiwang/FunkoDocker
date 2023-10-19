@@ -1,4 +1,4 @@
-package services;
+package services.funko;
 
 import model.Funko;
 import org.slf4j.Logger;
@@ -41,6 +41,12 @@ public class FunkoServiceImp implements FunkoService {
     public Flux<Funko> findByNombre(String nombre) {
         return funkoRepository.findByName(nombre);
     }
+
+    @Override
+    public Flux<Funko> findByModel(String model) {
+        return funkoRepository.findByModel(model);
+    }
+
     @Override
     public Mono<Funko> findByUuid(UUID uuid) {
         return funkoRepository.findyByUuid(uuid);
@@ -91,5 +97,10 @@ public class FunkoServiceImp implements FunkoService {
         }
         return Flux.fromIterable(funkosToSave)
                 .flatMap(funkoRepository::save);
+    }
+
+    @Override
+    public Flux<Funko> findByYear(int myYear) {
+        return funkoRepository.findByYear(myYear);
     }
 }
