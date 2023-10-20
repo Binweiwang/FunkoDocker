@@ -78,17 +78,21 @@ public class Client {
         try{
             Response response = gson.fromJson(in.readLine(), Response.class);
             logger.debug("Respuesta recibida: " + response);
-            switch (response.status()) {
-                case OK -> {
-                    funkoResponse(response);
-                }
-                case ERROR  -> {
-                    System.err.println("🔴 Error: Tipo de respuesta no esperado: " + response.content());
-                }
-                default -> closeConnection();
-            }
+            responseFunko(response);
         } catch (IOException e) {
             throw new RuntimeException(e);
+        }
+    }
+
+    private void responseFunko(Response response) throws IOException {
+        switch (response.status()) {
+            case OK -> {
+                System.out.println("🟢 Funko: " + response.content());
+            }
+            case ERROR  -> {
+                System.err.println("🔴 Error: Tipo de respuesta no esperado: " + response.content());
+            }
+            default -> closeConnection();
         }
     }
 
@@ -103,15 +107,7 @@ public class Client {
         try{
             Response response = gson.fromJson(in.readLine(), Response.class);
             logger.debug("Respuesta recibida: " + response);
-            switch (response.status()) {
-                case OK -> {
-                    funkoResponse(response);
-                }
-                case ERROR  -> {
-                    System.err.println("🔴 Error: Tipo de respuesta no esperado: " + response.content());
-                }
-                default -> closeConnection();
-            }
+            responseFunko(response);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -129,15 +125,7 @@ public class Client {
         try{
             Response response = gson.fromJson(in.readLine(), Response.class);
             logger.debug("Respuesta recibida: " + response);
-            switch (response.status()) {
-                case OK -> {
-                    funkoResponse(response);
-                }
-                case ERROR  -> {
-                    System.err.println("🔴 Error: Tipo de respuesta no esperado: " + response.content());
-                }
-                default -> closeConnection();
-            }
+            responseFunko(response);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -150,16 +138,7 @@ public class Client {
         try{
             Response response = gson.fromJson(in.readLine(), Response.class);
             logger.debug("Respuesta recibida: " + response);
-            switch (response.status()) {
-                case OK -> {
-                    funkoResponse(response);
-                }
-                case ERROR -> {
-                    System.err.println("🔴 Error: Tipo de respuesta no esperado: " + response.content());
-
-                }
-                default -> closeConnection();
-            }
+            responseFunko(response);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -172,16 +151,7 @@ public class Client {
         try{
             Response response = gson.fromJson(in.readLine(), Response.class);
             logger.debug("Respuesta recibida: " + response);
-            switch (response.status()) {
-                case OK -> {
-                    funkoResponse(response);
-                }
-                case ERROR  -> {
-                    System.err.println("🔴 Error: Tipo de respuesta no esperado: " + response.content());
-
-                }
-                default -> closeConnection();
-            }
+            responseFunko(response);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -194,15 +164,7 @@ public class Client {
         try{
             Response response = gson.fromJson(in.readLine(), Response.class);
             logger.debug("Respuesta recibida: " + response);
-            switch (response.status()) {
-                case OK -> {
-                    funkoResponse(response);
-                }
-                case ERROR  -> {
-                    System.err.println("🔴 Error: Tipo de respuesta no esperado: " + response.content());
-                }
-                default -> closeConnection();
-            }
+            responseFunko(response);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -219,15 +181,7 @@ public class Client {
         try{
             Response response = gson.fromJson(in.readLine(), Response.class);
             logger.debug("Respuesta recibida: " + response);
-            switch (response.status()) {
-                case OK -> {
-                    funkoResponse(response);
-                }
-                case ERROR  -> {
-                    System.err.println("🔴 Error: Tipo de respuesta no esperado: " + response.content());
-                }
-                default -> closeConnection();
-            }
+            responseFunko(response);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -235,7 +189,7 @@ public class Client {
 
     private String sendRequestLogin() {
         String myToken = null;
-        Request<Login> request = new Request<>(LOGIN, new Login("ana", "ana1234"),null, LocalDateTime.now().toString());
+        Request<Login> request = new Request<>(LOGIN, new Login("pepe", "pepe1234"),null, LocalDateTime.now().toString());
         System.out.println("Petición enviada: " + request);
         out.println(gson.toJson(request));
         try{
