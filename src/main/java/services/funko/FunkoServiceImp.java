@@ -6,6 +6,7 @@ import org.slf4j.LoggerFactory;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 import repository.funko.FunkoRepository;
+import server.exceptions.funkos.FunkoNotFoundException;
 
 import java.io.*;
 import java.nio.file.Paths;
@@ -15,11 +16,15 @@ import java.util.List;
 import java.util.UUID;
 
 public class FunkoServiceImp implements FunkoService {
+    private static final int CACHE_SIZE = 10;
     private static FunkoServiceImp instance;
     private final Logger logger = LoggerFactory.getLogger(FunkoServiceImp.class);
+    private final FunkosCache cache;
     private final FunkoRepository funkoRepository;
+
     private FunkoServiceImp(FunkoRepository funkoRepository) {
         this.funkoRepository = funkoRepository;
+        this.cache = new FunkosCacheImp(CACHE_SIZE);
     }
     public static FunkoServiceImp getInstance(FunkoRepository funkoRepository) {
         if (instance == null) {
@@ -34,7 +39,11 @@ public class FunkoServiceImp implements FunkoService {
 
     @Override
     public Mono<Funko> findById(Long id) {
-        return funkoRepository.findById(id);
+        return cache.get(id)
+                .switchIfEmpty(funkoRepository.findById(id))
+                .flatMap(funko -> cache.put(funko.getId(), funko)
+                        .then(Mono.just(funko)))
+                .switchIfEmpty(Mono.error(new FunkoNotFoundException("Funko con id " + id + " no encontrado")));
     }
 
     @Override
@@ -49,15 +58,23 @@ public class FunkoServiceImp implements FunkoService {
 
     @Override
     public Mono<Funko> findByUuid(UUID uuid) {
-        return funkoRepository.findyByUuid(uuid);
+        return funkoRepository.findyByUuid(uuid)
+                .flatMap(funko -> cache.put(funko.getId(),funko)
+                        .then(Mono.just(funko)))
+                .switchIfEmpty(Mono.error(new FunkoNotFoundException("Funko con uuid " + uuid + " no encontrado")));
     }
     @Override
     public Mono<Funko> save(Funko funko) {
-        return funkoRepository.save(funko);
+        return funkoRepository.save(funko)
+                .flatMap(saved -> funkoRepository.findyByUuid(saved.getCod()));
     }
     @Override
     public Mono<Funko> update(Funko funko) {
-        return funkoRepository.update(funko);
+        return funkoRepository.findById(funko.getId())
+                .switchIfEmpty(Mono.error(new FunkoNotFoundException("Funko con id " + funko.getId() + " no encontrado")))
+                .flatMap(existing -> funkoRepository.update(funko)
+                        .flatMap(updated -> cache.put(updated.getId(),updated)
+                                .thenReturn(updated)));
     }
     @Override
     public Mono<Funko> deleteByUuid(UUID uuid) {
@@ -65,13 +82,19 @@ public class FunkoServiceImp implements FunkoService {
     }
 
     @Override
-    public Mono<Boolean> deleteById(Long id) {
-        return funkoRepository.deleteById(id);
+    public Mono<Funko> deleteById(Long id) {
+        return funkoRepository.findById(id)
+                .switchIfEmpty(Mono.error(new FunkoNotFoundException("Funko con id " + id + " no encontrado")))
+                .flatMap(funko -> cache.remove(funko.getId())
+                        .then(funkoRepository.deleteById(funko.getId()))
+                        .thenReturn(funko));
     }
 
     @Override
     public Mono<Void> deleteAll() {
-        return funkoRepository.deleteAll();
+        cache.clear();
+        return funkoRepository.deleteAll()
+                .then(Mono.empty());
     }
     @Override
     public Flux<Funko> importar() {

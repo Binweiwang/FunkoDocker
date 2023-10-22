@@ -15,7 +15,7 @@ public interface FunkoService {
     Mono<Funko> save(Funko funko);
     Mono<Funko> update(Funko funko);
     Mono<Funko> deleteByUuid(UUID uuid);
-    Mono<Boolean> deleteById(Long id);
+    Mono<Funko> deleteById(Long id);
     Mono<Void> deleteAll();
     Flux<Funko> importar();
 

@@ -1,43 +1,25 @@
 
-@
-build.gradle.kts,d\b\dbcff70658daf80b53ce624f6adcaa529df5ed8d
+k
+;src/main/java/server/exceptions/server/ServerException.java,1\e\1e3450b83a8ba2d9cad2a2a6f33c772e7bedfc1a
+j
+:src/main/java/server/exceptions/funkos/FunkoException.java,0\2\02f7be111307c0a977ac1853e7b177a70f3ae097
+s
+Csrc/main/java/server/exceptions/funkos/FunkoNotStoredException.java,e\2\e2a1535ef29c05693583ec851d89d43007390135
+r
+Bsrc/main/java/server/exceptions/funkos/FunkoNotFoundException.java,f\1\f1f42a9e485670fda97fbb27d2c0acba7c9b36aa
+W
+'src/main/java/server/ClientHandler.java,8\3\838442382de80c390f402c43e3d768a78d8bca8f
+W
+'src/main/java/services/cache/Cache.java,2\8\287d6f91fe95610eef017d52536be254d4c0077e
+]
+-src/main/java/services/funko/FunkosCache.java,a\5\a5105351b5c1d17666bcd5dc63fbd0a8652a8623
 N
 src/main/java/model/Funko.java,4\5\45d041f388a0d2b2fd9e902267439a75e496b7e0
-C
-docker-compose.yaml,e\f\ef8def03dc8f162799089e9b5f4321201c8810d5
-c
-3src/main/java/repository/funko/FunkoRepository.java,1\5\1573ab0a8c931d58b247d04bc88f755c4de510ef
+`
+0src/main/java/services/funko/FunkosCacheImp.java,3\1\31d3bdfd96a6c8e3211684251937ed4869d5c846
 a
 1src/main/java/repository/curd/CrudRepository.java,2\f\2f82e21a64017ea24c48db5a5dbbac9523f90156
-C
-settings.gradle.kts,7\4\749edfcc96398253e5b3416184e95c46621da850
-P
- src/main/java/server/Server.java,4\c\4c405aa622276106ee9ef8c3a2fbee4e76dcafbb
-f
-6src/main/java/repository/funko/FunkoRepositoryImp.java,0\9\099c01eeeba8d20409b1178c18eb31ea42faf316
-[
-+src/main/java/database/DatabaseManager.java,1\1\116a739f36bc3ad20f460c5e6df1375ca5baf81d
-P
- src/main/java/client/Client.java,c\5\c5c2abc05e75daf87e5d896f0c1528ea106af1a0
-R
-"src/main/java/common/Response.java,4\4\4421825d5bbd1b15e22fd95573e5f0577ce6895e
-O
-src/main/java/common/Login.java,7\0\70e9b5fd6375b08024dfb57ddc64146001bc98a1
-N
-src/main/java/common/User.java,6\4\64aa4c8b993c2e7d5a79082b3ce60a0503139990
-a
-1src/main/java/repository/user/UserRepository.java,f\6\f68b71184216311c47262737a7a551d42c5b6d89
-^
-.src/main/java/services/token/TokenService.java,6\a\6a58bb3e5d53cd557a8ecac509ccc8c6592e354d
-Y
-)src/main/java/utils/LocalDateAdapter.java,c\d\cde6018a5a24d2245612f39a4c181dd74b310633
-Q
-!src/main/java/common/Request.java,4\e\4ef096d3bb1313e45dfc671376470f39287feedc
 ^
 .src/main/java/services/funko/FunkoService.java,e\b\eb7b5d426e9d19818b93f54c00e884c7b83f0523
 a
 1src/main/java/services/funko/FunkoServiceImp.java,9\8\98ea962d44a1dfbb563587b1d1e8aaec862d906a
-W
-'src/main/java/server/ClientHandler.java,8\3\838442382de80c390f402c43e3d768a78d8bca8f
-_
-/src/main/java/utils/LocalDateUpdateAdapter.java,b\e\be75b24dd85e18cbe8f97c5127766d2fc169eb64

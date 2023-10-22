@@ -17,24 +17,24 @@ public class Server {
     public static final String TOKEN_SECRET = "MiNombreEsBinwei";
     public static final long TOKEN_EXPIRATION = 10000;
     private static final AtomicLong clientNumber = new AtomicLong(0);
-    private final Logger logger = LoggerFactory.getLogger(Server.class);
     private static final FunkoService funkoService = FunkoServiceImp.getInstance(FunkoRepositoryImp.getInstance(DatabaseManager.getInstance()));
+    private final Logger logger = LoggerFactory.getLogger(Server.class);
 
     public static void main(String[] args) throws Exception {
-        try(ServerSocket serverSocket = new ServerSocket(3000);) {
+        try (ServerSocket serverSocket = new ServerSocket(3000)) {
             System.out.println("🚀 Servidor escuchando en el puerto 3000");
             var funkoService = FunkoServiceImp.getInstance(FunkoRepositoryImp.getInstance(DatabaseManager.getInstance()));
             Flux<Funko> importar = funkoService.importar();
             importar.subscribe(System.out::println);
             while (true) {
-                    new ClientHandler(serverSocket.accept(),clientNumber.incrementAndGet(), funkoService).start();
-                    if (clientNumber.get() == 10){
-                        break;
-                    }
+                new ClientHandler(serverSocket.accept(), clientNumber.incrementAndGet(), funkoService).start();
+                if (clientNumber.get() == 10) {
+                    break;
+                }
             }
         } catch (IOException e) {
             throw new RuntimeException("Error: " + e.getMessage());
-        }finally {
+        } finally {
             DatabaseManager.getInstance().close();
         }
     }
