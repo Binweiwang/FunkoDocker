@@ -18,4 +18,5 @@ public class LocalDateAdapter extends TypeAdapter<LocalDate> {
         jsonWriter.value(localDate.toString());
 
     }
+
 }

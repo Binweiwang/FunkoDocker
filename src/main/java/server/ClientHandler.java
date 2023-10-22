@@ -2,6 +2,7 @@ package server;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.JsonSyntaxException;
 import com.google.gson.reflect.TypeToken;
 import common.Login;
 import common.Request;
@@ -22,6 +23,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
+import java.rmi.ServerException;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Optional;
@@ -54,14 +56,15 @@ public class ClientHandler extends Thread {
                 request = gson.fromJson(clientInput, Request.class);
                 handleRequest(request);
             }
-
+        } catch (ServerException ex) {
+           out.println(gson.toJson(new Response(Response.Status.ERROR, ex.getMessage(), LocalDateTime.now().toString())));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
 
     @SuppressWarnings("uncheked")
-    private void handleRequest(Request request) throws IOException {
+    private void handleRequest(Request request) throws IOException,ServerException {
         logger.debug("Procesando petición: " + request);
         switch (request.type()){
             case LOGIN -> login(request);
@@ -75,45 +78,48 @@ public class ClientHandler extends Thread {
             case SALIR -> salir();
             default -> out.println(gson.toJson(new Response<>(Response.Status.ERROR, "Petición no soportada", LocalDateTime.now().toString())));
         }
+
     }
 
-    private void deleteFunko(Request request) {
+    private void deleteFunko(Request request) throws ServerException {
      var user = verifyToken(request.token());
      if(user.isPresent() && user.get().role().equals(User.Role.ADMIN)){
-         var myId = Long.parseLong(request.content());
+         var myId = Long.parseLong((String) request.content());
          funkoService.deleteById(myId).subscribe(
                  funko -> {
                      logger.debug("Funko eliminado: " + funko);
                      var resJson = gson.toJson(funko);
                      out.println(gson.toJson(new Response<>(Response.Status.OK,resJson, LocalDateTime.now().toString())));
                  },
-                 error -> logger.error("Error al eliminar funko: " + error),
-                 () -> logger.debug("Funko eliminado")
+                 error -> {
+                     out.println(gson.toJson(new Response(Response.Status.ERROR, error.getMessage(), LocalDateTime.now().toString())));
+                 }
          );
+     }else{
+         logger.error("Usuario no autenticado correctamente o no tiene permisos para esta acción");
+         throw new ServerException("Usuario no autenticado correctamente o no tiene permisos para esta acción");
      }
     }
 
-    private void updateFunko(Request request) {
-        var user = verifyToken(request.token());
-        if (user.isPresent()){
+    private void updateFunko(Request request) throws ServerException {
+            verifyToken(request.token());
             Funko funkoToUpdate = gson.fromJson(String.valueOf(request.content()),new TypeToken<Funko>(){}.getType());
-            funkoService.update(funkoToUpdate).subscribe(
+            funkoService.update(funkoToUpdate)
+                    .subscribe(
                     funko -> {
                         logger.debug("Funko actualizado: " + funko);
                         var resJson = gson.toJson(funko);
                         out.println(gson.toJson(new Response<>(Response.Status.OK,resJson, LocalDateTime.now().toString())));
                     },
-                    error -> logger.error("Error al actualizar funko: " + error),
-                    () -> logger.debug("Funko actualizado")
+                    error -> {
+                        logger.warn("Funko no actualizado: " + request.content());
+                        out.println(gson.toJson(new Response(Response.Status.ERROR, error.getMessage(), LocalDateTime.now().toString())));
+                    }
             );
-        }else {
-            out.println(gson.toJson(new Response<>(Response.Status.ERROR,"Usuario no encontrado", LocalDateTime.now().toString())));
-        }
     }
 
-    private void saveFunko(Request request) {
-        var user = verifyToken(request.token());
-        if (user.isPresent()){
+    private void saveFunko(Request request) throws ServerException {
+            verifyToken(request.token());
             Funko funkoToSave = gson.fromJson(String.valueOf(request.content()),new TypeToken<Funko>(){}.getType());
             funkoService.save(funkoToSave).subscribe(
                     funko -> {
@@ -121,52 +127,62 @@ public class ClientHandler extends Thread {
                         var resJson = gson.toJson(funko);
                         out.println(gson.toJson(new Response<>(Response.Status.OK,resJson, LocalDateTime.now().toString())));
                     },
-                    error -> logger.error("Error al guardar funko: " + error),
-                    () -> logger.debug("Funko guardado")
+                    error -> {
+                        logger.warn("Funko no guardado: " + error.getMessage());
+                        out.println(gson.toJson(new Response(Response.Status.ERROR, error.getMessage(), LocalDateTime.now().toString())));
+                    }
             );
-        }else{
-            out.println(gson.toJson(new Response<>(Response.Status.ERROR,"Usuario no encontrado", LocalDateTime.now().toString())));
-        }
     }
 
-    private void findFunkoByYear(Request request) {
+    private void findFunkoByYear(Request request) throws ServerException {
+            verifyToken(request.token());
+            var myYear = Integer.parseInt((String) request.content());
+            funkoService.findByYear(myYear)
+                    .collectList()
+                    .subscribe(
+                    funkos -> {
+                        logger.debug("Enviando funko: " + funkos);
+                        var resJson = gson.toJson(funkos);
+                        out.println(gson.toJson(new Response<>(Response.Status.OK,resJson, LocalDateTime.now().toString())));
+                    },
+                    error -> {
+                        logger.warn("Funko no encontrado por año: " + request.content());
+                        out.println(gson.toJson(new Response(Response.Status.ERROR, error.getMessage(), LocalDateTime.now().toString())));
+                    }
+            );
+    }
+
+    private void findFunkoByModel(Request request) throws ServerException {
         verifyToken(request.token());
-        var myYear = Integer.parseInt(request.content());
-        funkoService.findByYear(myYear).collectList().subscribe(
-                funkos -> {
-                    logger.debug("Enviando funko: " + funkos);
-                    var resJson = gson.toJson(funkos);
-                    out.println(gson.toJson(new Response<>(Response.Status.OK,resJson, LocalDateTime.now().toString())));
-                },
-                error -> logger.error("Error al enviar funko: " + error),
-                () -> logger.debug("Funkos enviados")
-        );
+            var myModel = request.content();
+            funkoService.findByModel((String) myModel)
+                    .collectList()
+                    .subscribe(
+                    funkos -> {
+                        logger.debug("Enviando funko: " + funkos);
+                        var resJson = gson.toJson(funkos);
+                        out.println(gson.toJson(new Response<>(Response.Status.OK,resJson, LocalDateTime.now().toString())));
+                    },
+                    error ->  {
+                        logger.warn("Funko no encontrado por modelo: " + request.content());
+                        out.println(gson.toJson(new Response(Response.Status.ERROR, error.getMessage(), LocalDateTime.now().toString())));
+                    }
+            );
     }
 
-    private void findFunkoByModel(Request request) {
-        verifyToken(request.token());
-        var myModel = request.content();
-        funkoService.findByModel(myModel).collectList().subscribe(
-                funkos -> {
-                    logger.debug("Enviando funko: " + funkos);
-                    var resJson = gson.toJson(funkos);
-                    out.println(gson.toJson(new Response<>(Response.Status.OK,resJson, LocalDateTime.now().toString())));
-                },
-                error -> logger.error("Error al enviar funko: " + error),
-                () -> logger.debug("Funkos enviados")
-        );
-    }
-
-    private void login(Request request) {
+    private void login(Request request) throws ServerException {
         logger.debug("Procesando petición de login: " + request);
         Login login =gson.fromJson(String.valueOf(request.content()),new TypeToken<Login>(){}.getType());
 
         var user = UserRepository.getInstance().findByUsername(login.username());
         if(user.isEmpty() || !BCrypt.checkpw(login.password(),user.get().password())){
-            out.println(gson.toJson(new Response<>(Response.Status.ERROR,"Usuario o contraseña incorrectos", LocalDateTime.now().toString())));
+            logger.warn("Usuario o contraseña incorrectos");
+            throw new ServerException("Usuario o contraseña incorrectos");
         }
-         var token = TokenService.getInstance().createToken(user.get(),Server.TOKEN_SECRET,Server.TOKEN_EXPIRATION);
-        out.println(gson.toJson(new Response<>(Response.Status.OK,token, LocalDateTime.now().toString())));
+
+        var token = TokenService.getInstance().createToken(user.get(),Server.TOKEN_SECRET,Server.TOKEN_EXPIRATION);
+    logger.debug("Token generado: " + token);
+        out.println(gson.toJson(new Response<>(Response.Status.TOKEN,token, LocalDateTime.now().toString())));
     }
 
     private void salir() throws IOException {
@@ -181,51 +197,52 @@ public class ClientHandler extends Thread {
         clientSocket.close();
     }
 
-    private void findFunkoById(Request request) {
+    private void findFunkoById(Request request) throws ServerException {
         verifyToken(request.token());
-        var myId = Long.parseLong(request.content());
-        funkoService.findById(myId).subscribe(
-                funko -> {
-                    logger.debug("Enviando funko: " + funko);
-                    var resJson = gson.toJson(funko);
-                    out.println(gson.toJson(new Response<>(Response.Status.OK,resJson, LocalDateTime.now().toString())));
-                },
-                error -> logger.error("Error al enviar funko: " + error),
-                () -> logger.debug("Funkos enviados")
-        );
+            var myId = Long.parseLong((String) request.content());
+            funkoService.findById(myId).subscribe(
+                    funko -> {
+                        logger.debug("Enviando funko: " + funko);
+                        var resJson = gson.toJson(funko);
+                        out.println(gson.toJson(new Response<>(Response.Status.OK,resJson, LocalDateTime.now().toString())));
+                    },
+                    error ->  {
+                        logger.warn("Funko no encontrado" + request.content());
+                        out.println(gson.toJson(new Response(Response.Status.ERROR, error.getMessage(), LocalDateTime.now().toString())));
+                    }
+            );
     }
 
-    private void findAllFunkos(Request request) {
-        verifyToken(request.token());
-        funkoService.findAll().collectList().subscribe(
-                funkos -> {
-                    logger.debug("Enviando funko: " + funkos);
-                    var resJson = gson.toJson(funkos);
-                    out.println(gson.toJson(new Response<>(Response.Status.OK,resJson, LocalDateTime.now().toString())));
-                },
-                error -> logger.error("Error al enviar funko: " + error),
-                () -> logger.debug("Funkos enviados")
-        );
+    private void findAllFunkos(Request request) throws ServerException {
+            verifyToken(request.token());
+            funkoService.findAll()
+                    .collectList()
+                    .subscribe(
+                    funkos -> {
+                        logger.debug("Enviando funko: " + funkos);
+                        var resJson = gson.toJson(funkos);
+                        out.println(gson.toJson(new Response<>(Response.Status.OK,resJson, LocalDateTime.now().toString())));
+                    }
+            );
     }
 
-    private Optional<User> verifyToken(String token) {
+    private Optional<User> verifyToken(String token) throws ServerException {
         if (TokenService.getInstance().verifyToken(token, Server.TOKEN_SECRET)) {
             logger.debug("Token verificado");
             var claims = TokenService.getInstance().getClaims(token, Server.TOKEN_SECRET);
             var id = claims.get("userid").asInt();
             var user = UserRepository.getInstance().findById(id);
-            if (user.isEmpty()){
+            if (user.isEmpty()) {
                 logger.error("Usuario no encontrado");
-                return Optional.empty();
-            } else {
-                logger.debug("Usuario encontrado");
-                return user;
+                throw new ServerException("Usuario no encontrado");
             }
-        }else{
-            logger.error("Token no verificado");
+            return user;
         }
-        return Optional.empty();
-    }
+            else {
+                logger.error("Token no verificado");
+                throw new ServerException("Token no válido");
+            }
+        }
 
     private void openConnection() throws IOException {
         logger.debug("Conectando con el cliente: " + clientNumber + " : "+ clientSocket.getInetAddress().getHostAddress() + ":" + clientSocket.getPort());

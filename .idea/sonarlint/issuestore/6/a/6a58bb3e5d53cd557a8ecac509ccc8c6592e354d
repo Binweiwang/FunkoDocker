@@ -1,10 +1,10 @@
 
 o
 java:S1192%"RDefine a constant instead of duplicating this literal "Verificando token" 3 times.(ç Ñÿ8Ð¨ì½´1
-n
-java:S1192*"QDefine a constant instead of duplicating this literal "Token verificado" 3 times.(¸žÓÊ8Ð¨ì½´1
 {
 java:S1192/"^Define a constant instead of duplicating this literal "Error al verificar el token: " 3 times.(»¬ô¨8Ð¨ì½´1
+n
+java:S1192*"QDefine a constant instead of duplicating this literal "Token verificado" 3 times.(¸žÓÊ8Ð¨ì½´1
 »
 java:S6548"˜A Singleton implementation was detected. Make sure the use of the Singleton pattern is required and the implementation is the right one for the context.(¸ªË¬ýÿÿÿÿ8•¸°¼´1
 g
