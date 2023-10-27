@@ -27,7 +27,7 @@ public class DatabaseManager implements AutoCloseable {
     private final ConnectionPool pool;
     private String databaseUser;
     private String databasePass;
-    private String databaseUrl;
+    private String databaseUrl ="r2dbc:h2:file:///./funkos";
     private boolean databaseInitTables;
 
     /**
@@ -61,6 +61,8 @@ public class DatabaseManager implements AutoCloseable {
         logger.debug("Cargando fichero de configuración de la base de datos");
         try {
             var pathFile = Paths.get("").toAbsolutePath() + File.separator + "src" + File.separator + "main" + File.separator + "resources" + File.separator + "database.properties";
+//            var pathFile = ClassLoader.getSystemResource("database.properties").getPath();
+            System.out.println(pathFile);
             var props = new Properties();
             props.load(new FileReader(pathFile));
 
