@@ -8,6 +8,9 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
+/**
+ * Clase Funko que representa un Funko
+ */
 @Data
 @Builder
 public class Funko {

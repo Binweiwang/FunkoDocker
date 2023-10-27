@@ -1,19 +1,19 @@
 
 T
-java:S2629#"7Use the built-in formatting to construct this argument.(şÓ£Ë8àĞÌµ1
+java:S26293"7Use the built-in formatting to construct this argument.(şÓ£Ë8àĞÌµ1
 Y
-java:S2629+"7Use the built-in formatting to construct this argument.(¯ƒƒ®üÿÿÿÿ8àĞÌµ1
+java:S2629A"7Use the built-in formatting to construct this argument.(¯ƒƒ®üÿÿÿÿ8àĞÌµ1
 Y
-java:S26291"7Use the built-in formatting to construct this argument.(æõ¶Åıÿÿÿÿ8àĞÌµ1
+java:S2629M"7Use the built-in formatting to construct this argument.(æõ¶Åıÿÿÿÿ8àĞÌµ1
 ^
-java:S3457#"AFormat specifiers should be used instead of string concatenation.(şÓ£Ë8èĞÌµ1
+java:S34573"AFormat specifiers should be used instead of string concatenation.(şÓ£Ë8èĞÌµ1
 N
-java:S1602$",Remove useless curly braces around statement(ûÌ©¨ÿÿÿÿÿ8èĞÌµ1
+java:S16024",Remove useless curly braces around statement(ûÌ©¨ÿÿÿÿÿ8èĞÌµ1
 c
-java:S3457+"AFormat specifiers should be used instead of string concatenation.(¯ƒƒ®üÿÿÿÿ8èĞÌµ1
+java:S3457A"AFormat specifiers should be used instead of string concatenation.(¯ƒƒ®üÿÿÿÿ8èĞÌµ1
 c
-java:S34571"AFormat specifiers should be used instead of string concatenation.(æõ¶Åıÿÿÿÿ8èĞÌµ1
+java:S3457M"AFormat specifiers should be used instead of string concatenation.(æõ¶Åıÿÿÿÿ8èĞÌµ1
 ^
-java:S3457:"AFormat specifiers should be used instead of string concatenation.(ıÌâÕ8ìĞÌµ1
+java:S3457Y"AFormat specifiers should be used instead of string concatenation.(ıÌâÕ8ìĞÌµ1
 H
-java:S1068"+Remove this unused "maxSize" private field.(şØ‘8ìĞÌµ1
+java:S1068"+Remove this unused "maxSize" private field.(şØ‘8ìĞÌµ1

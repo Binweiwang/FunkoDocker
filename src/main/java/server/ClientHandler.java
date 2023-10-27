@@ -28,23 +28,36 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Optional;
 
+/**
+ * Clase que gestiona las peticiones de los clientes
+ */
 @SuppressWarnings("unchecked")
 public class ClientHandler extends Thread {
+    // Atributos
     private final Logger logger = LoggerFactory.getLogger(ClientHandler.class.getName());
     private final Socket clientSocket;
-    private final Gson gson = new GsonBuilder().registerTypeAdapter(LocalDate.class, new LocalDateAdapter())
-            .registerTypeAdapter(LocalDateTime.class, new LocalDateTimeAdapter()).create();
+    private final Gson gson = new GsonBuilder().registerTypeAdapter(LocalDate.class, new LocalDateAdapter()).registerTypeAdapter(LocalDateTime.class, new LocalDateTimeAdapter()).create();
     private final FunkoService funkoService;
     private final long clientNumber;
     BufferedReader in;
     PrintWriter out;
 
+    /**
+     * Constructor de la clase
+     *
+     * @param socket       Socket del cliente
+     * @param clientNumber Número del cliente
+     * @param funkoService Servicio de Funko
+     */
     public ClientHandler(Socket socket, long clientNumber, FunkoServiceImp funkoService) {
         this.clientSocket = socket;
         this.funkoService = funkoService;
         this.clientNumber = clientNumber;
     }
 
+    /**
+     * Método que se ejecuta al iniciar el hilo
+     */
     public void run() {
         try {
             openConnection();
@@ -64,6 +77,12 @@ public class ClientHandler extends Thread {
         }
     }
 
+    /**
+     * Método que gestiona las peticiones del cliente
+     *
+     * @param request Petición del cliente
+     * @throws IOException Excepción de entrada/salida
+     */
     private void handleRequest(Request request) throws IOException {
         logger.debug("Procesando petición: " + request);
         switch (request.type()) {
@@ -82,6 +101,12 @@ public class ClientHandler extends Thread {
 
     }
 
+    /**
+     * Método que elimina un Funko
+     *
+     * @param request Petición del cliente
+     * @throws ServerException Excepción del servidor
+     */
     private void deleteFunko(Request request) throws ServerException {
         var user = verifyToken(request.token());
         if (user.isPresent() && user.get().role().equals(User.Role.ADMIN)) {
@@ -97,7 +122,12 @@ public class ClientHandler extends Thread {
         }
     }
 
-
+    /**
+     * Método que actualiza un Funko
+     *
+     * @param request Petición del cliente
+     * @throws ServerException Excepción del servidor
+     */
     private void updateFunko(Request request) throws ServerException {
         verifyToken(request.token());
         Funko funkoToUpdate = gson.fromJson(String.valueOf(request.content()), new TypeToken<Funko>() {
@@ -112,6 +142,12 @@ public class ClientHandler extends Thread {
         });
     }
 
+    /**
+     * Método que guarda un Funko
+     *
+     * @param request Petición del cliente
+     * @throws ServerException Excepción del servidor
+     */
     private void saveFunko(Request request) throws ServerException {
         verifyToken(request.token());
         Funko funkoToSave = gson.fromJson(String.valueOf(request.content()), new TypeToken<Funko>() {
@@ -126,6 +162,12 @@ public class ClientHandler extends Thread {
         });
     }
 
+    /**
+     * Método que busca un Funko por año
+     *
+     * @param request Petición del cliente
+     * @throws ServerException Excepción del servidor
+     */
     private void findFunkoByYear(Request request) throws ServerException {
         verifyToken(request.token());
         var myYear = Integer.parseInt((String) request.content());
@@ -139,6 +181,12 @@ public class ClientHandler extends Thread {
         });
     }
 
+    /**
+     * Método que busca un Funko por modelo
+     *
+     * @param request Petición del cliente
+     * @throws ServerException Excepción del servidor
+     */
     private void findFunkoByModel(Request request) throws ServerException {
         verifyToken(request.token());
         var myModel = request.content();
@@ -152,6 +200,12 @@ public class ClientHandler extends Thread {
         });
     }
 
+    /**
+     * Método que gestiona el login
+     *
+     * @param request Petición del cliente
+     * @throws ServerException Excepción del servidor
+     */
     private void login(Request request) throws ServerException {
         logger.debug("Procesando petición de login: " + request);
         Login login = gson.fromJson(String.valueOf(request.content()), new TypeToken<Login>() {
@@ -168,11 +222,21 @@ public class ClientHandler extends Thread {
         out.println(gson.toJson(new Response<>(Response.Status.TOKEN, token, LocalDateTime.now().toString())));
     }
 
+    /**
+     * Método que cierra la conexión con el cliente
+     *
+     * @throws IOException Excepción de entrada/salida
+     */
     private void salir() throws IOException {
         out.println(gson.toJson(new Response<>(Response.Status.CLOSE, "Cerrando conexión con el servidor", LocalDateTime.now().toString())));
         closeConnection();
     }
 
+    /**
+     * Método que cierra la conexión con el cliente
+     *
+     * @throws IOException Excepción de entrada/salida
+     */
     private void closeConnection() throws IOException {
         logger.debug("Cerrando la conexión con el cliente " + clientSocket.getInetAddress().getHostAddress() + ":" + clientSocket.getPort());
         out.close();
@@ -180,6 +244,12 @@ public class ClientHandler extends Thread {
         clientSocket.close();
     }
 
+    /**
+     * Método que busca un Funko por id
+     *
+     * @param request Petición del cliente
+     * @throws ServerException Excepción del servidor
+     */
     private void findFunkoById(Request request) throws ServerException {
         verifyToken(request.token());
         var myId = Long.parseLong((String) request.content());
@@ -193,17 +263,28 @@ public class ClientHandler extends Thread {
         });
     }
 
+    /**
+     * Método que busca todos los Funkos
+     *
+     * @param request Petición del cliente
+     * @throws ServerException Excepción del servidor
+     */
     private void findAllFunkos(Request request) throws ServerException {
         verifyToken(request.token());
-        funkoService.findAll()
-                .collectList()
-                .subscribe(funkos -> {
-                    logger.debug("Enviando funko: " + funkos);
-                    var resJson = gson.toJson(funkos);
-                    out.println(gson.toJson(new Response<>(Response.Status.OK, resJson, LocalDateTime.now().toString())));
-                });
+        funkoService.findAll().collectList().subscribe(funkos -> {
+            logger.debug("Enviando funko: " + funkos);
+            var resJson = gson.toJson(funkos);
+            out.println(gson.toJson(new Response<>(Response.Status.OK, resJson, LocalDateTime.now().toString())));
+        });
     }
 
+    /**
+     * Método que verifica el token
+     *
+     * @param token Token del cliente
+     * @return Un Optional de User
+     * @throws ServerException Excepción del servidor
+     */
     private Optional<User> verifyToken(String token) throws ServerException {
         if (TokenService.getInstance().verifyToken(token, Server.TOKEN_SECRET)) {
             logger.debug("Token verificado");
@@ -221,6 +302,11 @@ public class ClientHandler extends Thread {
         }
     }
 
+    /**
+     * Método que abre la conexión con el cliente
+     *
+     * @throws IOException Excepción de entrada/salida
+     */
     private void openConnection() throws IOException {
         logger.debug("Conectando con el cliente: " + clientNumber + " : " + clientSocket.getInetAddress().getHostAddress() + ":" + clientSocket.getPort());
         in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));

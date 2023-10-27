@@ -8,6 +8,9 @@ import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
+/**
+ * Una clase de adaptador para convertir entre una fecha y una cadena JSON.
+ */
 public class LocalDateTimeAdapter extends TypeAdapter<LocalDateTime> {
 
     private final DateTimeFormatter formatter = DateTimeFormatter.ISO_LOCAL_DATE_TIME;

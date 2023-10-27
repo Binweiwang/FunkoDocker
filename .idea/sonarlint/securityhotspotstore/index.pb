@@ -39,8 +39,6 @@ a
 1src/main/java/services/funko/FunkoServiceImp.java,9\8\98ea962d44a1dfbb563587b1d1e8aaec862d906a
 W
 'src/main/java/server/ClientHandler.java,8\3\838442382de80c390f402c43e3d768a78d8bca8f
-_
-/src/main/java/utils/LocalDateUpdateAdapter.java,b\e\be75b24dd85e18cbe8f97c5127766d2fc169eb64
 d
 4src/main/java/client/exceptions/ClientException.java,6\7\673a47b1dcea9d2c1fd064e1fb68d9949a4d03ca
 ?
@@ -59,3 +57,11 @@ W
 -src/main/java/services/funko/FunkosCache.java,a\5\a5105351b5c1d17666bcd5dc63fbd0a8652a8623
 `
 0src/main/java/services/funko/FunkosCacheImp.java,3\1\31d3bdfd96a6c8e3211684251937ed4869d5c846
+]
+-src/main/java/utils/LocalDateTimeAdapter.java,3\f\3f37ebdba37398a1fde9355533fa08ef30fa8d6c
+a
+1src/test/java/repository/FunkoRepositoryTest.java,8\5\851a60104291b2cf3457251784e71c2b9d0f6576
+\
+,src/test/java/services/FunkoServiceTest.java,4\5\45e3d0315870856ca0e4e736be64f7e09feefd61
+9
+	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d

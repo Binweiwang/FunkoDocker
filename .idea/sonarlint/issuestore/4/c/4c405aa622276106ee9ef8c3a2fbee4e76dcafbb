@@ -1,0 +1,8 @@
+
+g	java:S112."FDefine and throw a dedicated exception instead of using a generic one.(ò˜“şÿÿÿÿ8Ë×í³¶1
+L	java:S106#"+Replace this use of System.out by a logger.(ŸäîÓùÿÿÿÿ8××í³¶1
+L	java:S106&"+Replace this use of System.out by a logger.(ëñÈùÿÿÿÿ8××í³¶1
+M
+java:S1068"0Remove this unused "funkoService" private field.(¦©ıÿ8Û×í³¶1
+G
+java:S1068"*Remove this unused "logger" private field.(²ù®Ù8Û×í³¶1

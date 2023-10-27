@@ -12,18 +12,20 @@ import org.slf4j.LoggerFactory;
 import utils.LocalDateAdapter;
 import utils.LocalDateTimeAdapter;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
+import java.io.*;
 import java.net.Socket;
+import java.nio.file.Paths;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
 import static common.Request.Type.*;
 
+/**
+ * Cliente para comunicar con el servidor
+ */
 public class Client {
+    // Atributos
     private static final String HOST = "localhost";
     private static final int PORT = 3000;
     private static final Logger logger = LoggerFactory.getLogger(Client.class);
@@ -33,24 +35,41 @@ public class Client {
     private BufferedReader in;
     private String token;
 
+    /**
+     * Constructor
+     */
     public Client() {
         this.gson = new Gson();
     }
 
+    /**
+     * Método main
+     *
+     * @param args Argumentos
+     */
     public static void main(String[] args) {
         Client client = new Client();
         try {
-
             client.start();
         } catch (IOException e) {
             logger.debug("Error: " + e.getMessage());
         }
     }
 
+    /**
+     * Método para mostrar la respuesta del servidor
+     *
+     * @param response Respuesta del servidor
+     */
     private static void funkoResponse(Response response) {
         System.out.println("🟢 Funko: " + response.content());
     }
 
+    /**
+     * Método para iniciar el cliente
+     *
+     * @throws IOException Excepción de entrada/salida
+     */
     private void start() throws IOException {
         try {
 
@@ -77,6 +96,14 @@ public class Client {
 
     }
 
+    /**
+     * Método para borrar un funko
+     *
+     * @param token  Token del usuario
+     * @param number Número del funko
+     * @throws ClientException Excepción del cliente
+     * @throws IOException     Excepción de entrada/salida
+     */
     private void deleteFunko(String token, String number) throws ClientException, IOException {
         Request<String> request = new Request<>(DELETE_FUNKO, number, token, LocalDateTime.now().toString());
         logger.debug("Petición deleteFunko enviada: " + request);
@@ -86,6 +113,13 @@ public class Client {
         responseFunko(response);
     }
 
+    /**
+     * .
+     * Método para mostrar la respuesta del servidor
+     *
+     * @param response Respuesta del servidor
+     * @throws ClientException Excepción del cliente
+     */
     private void responseFunko(Response response) throws ClientException {
         switch (response.status()) {
             case OK -> {
@@ -98,6 +132,12 @@ public class Client {
         }
     }
 
+    /**
+     * Método para actualizar un funko
+     *
+     * @param token Token del usuario
+     * @param funko Funko que se va a actualizar
+     */
     private void updateFunko(String token, Funko funko) {
         Gson gson = new GsonBuilder().registerTypeAdapter(LocalDate.class, new LocalDateAdapter())
                 .registerTypeAdapter(LocalDateTime.class, new LocalDateTimeAdapter()).create();
@@ -115,6 +155,10 @@ public class Client {
 
     }
 
+    /**
+     * @param token Token del usuario
+     * @param funko Funko que se va a guardar
+     */
     private void saveFunko(String token, Funko funko) {
         Gson gson = new GsonBuilder().registerTypeAdapter(LocalDate.class, new LocalDateAdapter())
                 .registerTypeAdapter(LocalDateTime.class, new LocalDateTimeAdapter()).create();
@@ -131,6 +175,12 @@ public class Client {
         }
     }
 
+    /**
+     * Método para buscar un funko por año
+     *
+     * @param token Token del usuario
+     * @param year  Año del funko
+     */
     private void findFunkoByYear(String token, String year) {
         Request<String> request = new Request<>(OBTAIN_FUNKO_YEAR, year, token, LocalDateTime.now().toString());
         logger.debug("Petición findFunkoByYear enviada: " + request);
@@ -144,6 +194,12 @@ public class Client {
         }
     }
 
+    /**
+     * Método para buscar un funko por modelo
+     *
+     * @param token Token del usuario
+     * @param model Modelo del funko
+     */
     private void findFunkoByModel(String token, String model) {
         Request<String> request = new Request<>(OBTAIN_FUNKO_MODEL, model, token, LocalDateTime.now().toString());
         logger.debug("Petición findFunkoByModel enviada: " + request);
@@ -157,6 +213,12 @@ public class Client {
         }
     }
 
+    /**
+     * Método para buscar un funko por id
+     *
+     * @param token Token del usuario
+     * @param id    Id del funko
+     */
     private void findFunkoById(String token, String id) {
         Request<String> request = new Request<>(OBTAIN_FUNKO_COD, id, token, LocalDateTime.now().toString());
         logger.debug("Petición findFunkoById enviada: " + request);
@@ -170,6 +232,11 @@ public class Client {
         }
     }
 
+    /**
+     * Método para buscar todos los funkos
+     *
+     * @param token Token del usuario
+     */
     private void findAllFunkos(String token) {
         Request<String> request = new Request<>(FIND_ALL_FUNKOS, null, token, LocalDateTime.now().toString());
         logger.debug("Petición enviada: " + request);
@@ -183,6 +250,11 @@ public class Client {
         }
     }
 
+    /**
+     * Método para enviar la petición de login
+     *
+     * @return Devuelve el token del usuario
+     */
     private String sendRequestLogin() {
         String myToken = null;
         Request<Login> request = new Request<>(LOGIN, new Login("pepe", "pepe1234"), null, LocalDateTime.now().toString());
@@ -205,6 +277,11 @@ public class Client {
         return myToken;
     }
 
+    /**
+     * Método para cerrar la conexión
+     *
+     * @throws IOException Excepción de entrada/salida
+     */
     private void closeConnection() throws IOException {
         logger.debug("Cerrando la conexión con el servidor: " + HOST + ":" + PORT);
         System.out.println("🔵 Cerrando Cliente");
@@ -213,6 +290,11 @@ public class Client {
         if (socket != null) socket.close();
     }
 
+    /**
+     * Método para abrir la conexión
+     *
+     * @throws IOException Excepción de entrada/salida
+     */
     private void openConnection() throws IOException {
 
         logger.debug("Abriendo conexión con el servidor: " + HOST + ":" + PORT);
