@@ -1,94 +1,86 @@
 
-g	java:S112>"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8°Øæ´1
 L
-java:S37403"/Provide the parametrized type for this generic.(ÛÕ²×8°Øæ´1
+java:S3740A"/Provide the parametrized type for this generic.(ÛÕ²×8ÌÏÍµ1
 L
-java:S3740<"/Provide the parametrized type for this generic.(¼¥à8°Øæ´1
+java:S3740J"/Provide the parametrized type for this generic.(¼¥à8ÌÏÍµ1
 Q
-java:S3740C"/Provide the parametrized type for this generic.(¡ë„¾ùÿÿÿÿ8°Øæ´1
+java:S3740V"/Provide the parametrized type for this generic.(´ç÷şøÿÿÿÿ8ÌÏÍµ1
 Q
-java:S3740T"/Provide the parametrized type for this generic.(­­™Ñüÿÿÿÿ8°Øæ´1
-L
-java:S3740_"/Provide the parametrized type for this generic.(ô¥Ì8°Øæ´1
-L
-java:S3740h"/Provide the parametrized type for this generic.(Ù§Â‡8°Øæ´1
-L
-java:S3740t"/Provide the parametrized type for this generic.(ô¥Ì8°Øæ´1
+java:S3740n"/Provide the parametrized type for this generic.(­­™Ñüÿÿÿÿ8ÌÏÍµ1
 Q
-java:S3740y"/Provide the parametrized type for this generic.(ÚÍş¥úÿÿÿÿ8°Øæ´1
+java:S3740v"/Provide the parametrized type for this generic.(æÿ£ğüÿÿÿÿ8ĞÏÍµ1
 M
-java:S3740„"/Provide the parametrized type for this generic.(ô¥Ì8°Øæ´1
+java:S3740ƒ"/Provide the parametrized type for this generic.(Ù§Â‡8ĞÏÍµ1
 M
-java:S3740‰"/Provide the parametrized type for this generic.(£€Åü8°Øæ´1
-M
-java:S3740–"/Provide the parametrized type for this generic.(ô¥Ì8°Øæ´1
+java:S3740"/Provide the parametrized type for this generic.(ô¥Ì8ĞÏÍµ1
 R
-java:S3740›"/Provide the parametrized type for this generic.(¢şßıÿÿÿÿ8°Øæ´1
+java:S3740—"/Provide the parametrized type for this generic.(ÚÍş¥úÿÿÿÿ8ĞÏÍµ1
 M
-java:S3740¨"/Provide the parametrized type for this generic.(ô¥Ì8°Øæ´1
+java:S3740¡"/Provide the parametrized type for this generic.(ô¥Ì8ĞÏÍµ1
+M
+java:S3740«"/Provide the parametrized type for this generic.(£€Åü8ĞÏÍµ1
+M
+java:S3740´"/Provide the parametrized type for this generic.(ô¥Ì8ĞÏÍµ1
+R
+java:S3740¾"/Provide the parametrized type for this generic.(¢şßıÿÿÿÿ8ĞÏÍµ1
+M
+java:S3740Ç"/Provide the parametrized type for this generic.(ô¥Ì8ĞÏÍµ1
 K
-java:S3740­"/Provide the parametrized type for this generic.(”·"8°Øæ´1
+java:S3740Ñ"/Provide the parametrized type for this generic.(”·"8ĞÏÍµ1
 R
-java:S3740È"/Provide the parametrized type for this generic.(—€¿‰ıÿÿÿÿ8°Øæ´1
+java:S3740ı"/Provide the parametrized type for this generic.(—€¿‰ıÿÿÿÿ8ĞÏÍµ1
 M
-java:S3740Ó"/Provide the parametrized type for this generic.(ô¥Ì8“ªØæ´1
+java:S3740†"/Provide the parametrized type for this generic.(ô¥Ì8ĞÏÍµ1
 R
-java:S3740Ø"/Provide the parametrized type for this generic.(×¡î·şÿÿÿÿ8°Øæ´1
-t
-java:S1192"QDefine a constant instead of duplicating this literal "Enviando funko: " 4 times.(½ˆØÑøÿÿÿÿ8°Øæ´1
+java:S3740"/Provide the parametrized type for this generic.(×¡î·şÿÿÿÿ8ĞÏÍµ1
 T
-java:S26297"7Use the built-in formatting to construct this argument.(…¹ÿ8°Øæ´1
+java:S2629E"7Use the built-in formatting to construct this argument.(…¹ÿ8ĞÏÍµ1
 T
-java:S2629D"7Use the built-in formatting to construct this argument.(¶ó°Ò8°Øæ´1
+java:S2629W"7Use the built-in formatting to construct this argument.(¶ó°Ò8ĞÏÍµ1
 Z
-java:S2629®"7Use the built-in formatting to construct this argument.(•Îùøÿÿÿÿ8°Øæ´1
+java:S2629Ò"7Use the built-in formatting to construct this argument.(•Îùøÿÿÿÿ8ĞÏÍµ1
 Z
-java:S2629¸"7Use the built-in formatting to construct this argument.(Í‰üÿÿÿÿ8°Øæ´1
+java:S2629İ"7Use the built-in formatting to construct this argument.(Í‰üÿÿÿÿ8ĞÏÍµ1
 Z
-java:S2629ø"7Use the built-in formatting to construct this argument.(¨À‘îıÿÿÿÿ8°Øæ´1
+java:S2629·"7Use the built-in formatting to construct this argument.(¨À‘îıÿÿÿÿ8ĞÏÍµ1
 Y
-java:S2589V"7Remove this expression which always evaluates to "true"(ÜÀêÉşÿÿÿÿ8¿Øæ´1
+java:S2589p"7Remove this expression which always evaluates to "true"(ÜÀêÉşÿÿÿÿ8äÏÍµ1
 W
-java:S1161/":Add the "@Override" annotation above this method signature(“–ış8¿Øæ´1
+java:S1161=":Add the "@Override" annotation above this method signature(“–ış8èÏÍµ1
 ^
-java:S34577"AFormat specifiers should be used instead of string concatenation.(…¹ÿ8¿Øæ´1
-•
-java:S1130C"sRemove the declaration of thrown exception 'java.rmi.ServerException' which is a subclass of 'java.io.IOException'.(¡ë„¾ùÿÿÿÿ8¿Øæ´1
+java:S3457E"AFormat specifiers should be used instead of string concatenation.(…¹ÿ8íÏÍµ1
+G	java:S106L"+Replace this use of System.err by a logger.(’ğ÷ß8íÏÍµ1
 ^
-java:S3457D"AFormat specifiers should be used instead of string concatenation.(¶ó°Ò8¿Øæ´1
+java:S3457W"AFormat specifiers should be used instead of string concatenation.(¶ó°Ò8íÏÍµ1
 c
-java:S3457Z"AFormat specifiers should be used instead of string concatenation.(¿­ÔĞüÿÿÿÿ8ÏØæ´1
-N
-java:S1602^",Remove useless curly braces around statement(°‚˜§üÿÿÿÿ8ÏØæ´1
-^
-java:S3457n"AFormat specifiers should be used instead of string concatenation.(„”àı8ÏØæ´1
-c
-java:S3457s"AFormat specifiers should be used instead of string concatenation.(—¡í¿øÿÿÿÿ8ÏØæ´1
-c
-java:S3457~"AFormat specifiers should be used instead of string concatenation.(¼ĞÃµûÿÿÿÿ8ÏØæ´1
+java:S3457s"AFormat specifiers should be used instead of string concatenation.(¿­ÔĞüÿÿÿÿ8íÏÍµ1
 _
-java:S3457ƒ"AFormat specifiers should be used instead of string concatenation.(ıÆ´ù8ÏØæ´1
+java:S3457ˆ"AFormat specifiers should be used instead of string concatenation.(„”àı8ñÏÍµ1
 d
-java:S3457"AFormat specifiers should be used instead of string concatenation.(½ˆØÑøÿÿÿÿ8ÏØæ´1
+java:S3457Œ"AFormat specifiers should be used instead of string concatenation.(—¡í¿øÿÿÿÿ8ñÏÍµ1
+d
+java:S3457œ"AFormat specifiers should be used instead of string concatenation.(¼ĞÃµûÿÿÿÿ8ñÏÍµ1
 _
-java:S3457•"AFormat specifiers should be used instead of string concatenation.(Ô›¸«8ÏØæ´1
+java:S3457 "AFormat specifiers should be used instead of string concatenation.(ıÆ´ù8ñÏÍµ1
 d
-java:S3457¢"AFormat specifiers should be used instead of string concatenation.(½ˆØÑøÿÿÿÿ8ÏØæ´1
+java:S3457¯"AFormat specifiers should be used instead of string concatenation.(œ¬·úÿÿÿÿ8ôÏÍµ1
 _
-java:S3457§"AFormat specifiers should be used instead of string concatenation.(°Û€8ÏØæ´1
+java:S3457³"AFormat specifiers should be used instead of string concatenation.(Ô›¸«8ôÏÍµ1
 d
-java:S3457®"AFormat specifiers should be used instead of string concatenation.(•Îùøÿÿÿÿ8ÏØæ´1
-d
-java:S3457¸"AFormat specifiers should be used instead of string concatenation.(Í‰üÿÿÿÿ8ÏØæ´1
-d
-java:S3457Â"AFormat specifiers should be used instead of string concatenation.(Òˆµ„ùÿÿÿÿ8ÏØæ´1
+java:S3457Â"AFormat specifiers should be used instead of string concatenation.(•ĞÕÉÿÿÿÿÿ8ôÏÍµ1
 _
-java:S3457Í"AFormat specifiers should be used instead of string concatenation.(¤É„Ã8ÏØæ´1
+java:S3457Æ"AFormat specifiers should be used instead of string concatenation.(°Û€8ôÏÍµ1
 d
-java:S3457Ò"AFormat specifiers should be used instead of string concatenation.(µñ¦Ôÿÿÿÿÿ8ÏØæ´1
+java:S3457Ò"AFormat specifiers should be used instead of string concatenation.(•Îùøÿÿÿÿ8ôÏÍµ1
 d
-java:S3457Ş"AFormat specifiers should be used instead of string concatenation.(½ˆØÑøÿÿÿÿ8ÏØæ´1
+java:S3457İ"AFormat specifiers should be used instead of string concatenation.(Í‰üÿÿÿÿ8ôÏÍµ1
 d
-java:S3457ø"AFormat specifiers should be used instead of string concatenation.(¨À‘îıÿÿÿÿ8ÏØæ´1
-\
-java:S1128"@Remove this unused import 'com.google.gson.JsonSyntaxException'.(èİ£68€ˆÙæ´1
+java:S3457ñ"AFormat specifiers should be used instead of string concatenation.(Òˆµ„ùÿÿÿÿ8ùÏÍµ1
+_
+java:S3457"AFormat specifiers should be used instead of string concatenation.(¤É„Ã8ùÏÍµ1
+d
+java:S3457…"AFormat specifiers should be used instead of string concatenation.(µñ¦Ôÿÿÿÿÿ8ùÏÍµ1
+d
+java:S3457“"AFormat specifiers should be used instead of string concatenation.(½ˆØÑøÿÿÿÿ8ùÏÍµ1
+d
+java:S3457·"AFormat specifiers should be used instead of string concatenation.(¨À‘îıÿÿÿÿ8ıÏÍµ1

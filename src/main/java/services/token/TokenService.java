@@ -10,18 +10,38 @@ import org.slf4j.LoggerFactory;
 
 import java.util.Date;
 
+/**
+ * Clase que implementa la interfaz de token service
+ */
 public class TokenService {
+    // Atributos
     private static TokenService instance;
     private final Logger logger = LoggerFactory.getLogger(TokenService.class);
 
+    /**
+     * Constructor de la clase
+     */
     private TokenService() {
     }
+
+    /**
+     * Singleton de la clase
+     * @return una instancia de la clase TokenService
+     */
     public synchronized static TokenService getInstance(){
         if (instance == null) {
             instance = new TokenService();
         }
         return instance;
     }
+
+    /**
+     * Método que crea un token
+     * @param user Usuario
+     * @param tokenSecret Secreto del token
+     * @param tokenExpiration Tiempo de expiración del token
+     * @return String de token
+     */
     public String createToken(User user, String tokenSecret, long tokenExpiration){
         logger.debug("Creando token");
         Algorithm algorithm = Algorithm.HMAC256(tokenSecret);
@@ -33,6 +53,14 @@ public class TokenService {
                 .withExpiresAt(new Date(System.currentTimeMillis() + tokenExpiration))
                 .sign(algorithm);
     }
+
+    /**
+     * Método que verifica un token
+     * @param token Token
+     * @param tokenSecret Secreto del token
+     * @param user Usuario
+     * @return boolean de verificación
+     */
     public boolean verifyToken(String token,String tokenSecret, User user) {
         logger.debug("Verificando token");
         Algorithm algorithm = Algorithm.HMAC256(tokenSecret);
@@ -48,6 +76,13 @@ public class TokenService {
               return false;
         }
     }
+
+    /**
+     * Método que verifica un token
+     * @param token Token
+     * @param tokenSecret Secreto del token
+     * @return boolean de verificación
+     */
     public boolean verifyToken(String token, String tokenSecret) {
         logger.debug("Verificando token");
         Algorithm algorithm = Algorithm.HMAC256(tokenSecret);
@@ -62,6 +97,13 @@ public class TokenService {
             return false;
         }
     }
+
+    /**
+     * Método que devuelve los claims de un token
+     * @param token Token
+     * @param tokenSecret Secreto del token
+     * @return Map de claims
+     */
     public java.util.Map<String, com.auth0.jwt.interfaces.Claim> getClaims(String token, String tokenSecret) {
         logger.debug("Verificando token");
         Algorithm algorithm = Algorithm.HMAC256(tokenSecret);

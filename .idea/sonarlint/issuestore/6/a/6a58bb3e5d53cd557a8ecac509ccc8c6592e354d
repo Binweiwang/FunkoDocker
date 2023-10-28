@@ -1,21 +1,21 @@
 
 o
-java:S1192%"RDefine a constant instead of duplicating this literal "Verificando token" 3 times.(ç Ñÿ8Ğ¨ì½´1
-{
-java:S1192/"^Define a constant instead of duplicating this literal "Error al verificar el token: " 3 times.(»¬ô¨8Ğ¨ì½´1
+java:S1192A"RDefine a constant instead of duplicating this literal "Verificando token" 3 times.(ç Ñÿ8¢Ê£´¶1
 n
-java:S1192*"QDefine a constant instead of duplicating this literal "Token verificado" 3 times.(¸ÓÊ8Ğ¨ì½´1
+java:S1192F"QDefine a constant instead of duplicating this literal "Token verificado" 3 times.(¸ÓÊ8¢Ê£´¶1
+{
+java:S1192K"^Define a constant instead of duplicating this literal "Error al verificar el token: " 3 times.(»¬ô¨8¢Ê£´¶1
 »
-java:S6548"˜A Singleton implementation was detected. Make sure the use of the Singleton pattern is required and the implementation is the right one for the context.(¸ªË¬ıÿÿÿÿ8•¸°¼´1
+java:S6548"˜A Singleton implementation was detected. Make sure the use of the Singleton pattern is required and the implementation is the right one for the context.(¸ªË¬ıÿÿÿÿ8ÎÊ£´¶1
 g
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.(µŸ÷üùÿÿÿÿ8—¸°¼´1
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(µŸ÷üùÿÿÿÿ8ÎÊ£´¶1
 ^
-java:S3457/"AFormat specifiers should be used instead of string concatenation.(»¬ô¨8ù£²¼´1
+java:S3457K"AFormat specifiers should be used instead of string concatenation.(»¬ô¨8îÊ£´¶1
 Q
-java:S14819"/Remove this unused "decodedJWT" local variable.(›ÑÒ‚ıÿÿÿÿ8¢¶ë½´1
+java:S1481\"/Remove this unused "decodedJWT" local variable.(›ÑÒ‚ıÿÿÿÿ8şÊ£´¶1
 ^
-java:S3457="AFormat specifiers should be used instead of string concatenation.(äÍÙŒ8£¶ë½´1
+java:S3457`"AFormat specifiers should be used instead of string concatenation.(äÍÙŒ8şÊ£´¶1
 ^
-java:S3457K"AFormat specifiers should be used instead of string concatenation.(äÍÙŒ8â¨ì½´1
+java:S3457u"AFormat specifiers should be used instead of string concatenation.(äÍÙŒ8şÊ£´¶1
 A
-java:S1168L"$Return an empty map instead of null.(¥¹ï8å¨ì½´1
+java:S1168v"$Return an empty map instead of null.(¥¹ï8‚Ë£´¶1
