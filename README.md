@@ -11,6 +11,22 @@ Se ha implementado un sistema de autenticación y autorización basado en **JWT*
 - **Logger**: Registra todas las operaciones y eventos significativos.
 
 # Cómo empezar
+<<<<<<< HEAD
 1. **Instalación y Configuración**:
    - Clona el repositorio: **"git clone ""**
 
+=======
+1. **Instalación**:
+    - Clona el repositorio: ```git clone https://github.com/Binweiwang/FunkoDocker.git```
+
+2. **Ejecución**:
+    - Construir el docker: ```docker-compose -f docker-compose.yaml up --build```
+
+3. **Uso**:
+    - Utiliza un cliente para realizar peticiones al servidor.
+
+# Testing
+Se ha hecho un especial énfasis en el testeo, asegurando una cobertura del 85%. Para ver el informe de cobertura:
+    - Ejecute: ```./gradle test jacocoTestReport```
+    - Abra el archivo ```"build/reports/jacoco/test/html/index.html"``` en un navegador.
+>>>>>>> develop
