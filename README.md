@@ -24,7 +24,3 @@ Se ha implementado un sistema de autenticación y autorización basado en **JWT*
 Se ha hecho un especial énfasis en el testeo, asegurando una cobertura del 85%. Para ver el informe de cobertura:
     - Ejecute: ```./gradle test jacocoTestReport```
     - Abra el archivo ```"build/reports/jacoco/test/html/index.html"``` en un navegador.
-
-# Video Demostrativo
-
-
