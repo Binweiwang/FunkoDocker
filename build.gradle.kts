@@ -1,7 +1,9 @@
 plugins {
     id("java")
-    // Para que funcione el shadowJar
+    // shadowJar
     id("com.github.johnrengelman.shadow") version "7.0.0"
+    // Jacoco
+    id("jacoco")
 }
 
 group = "org.example"
@@ -42,6 +44,10 @@ dependencies {
 tasks.test {
     useJUnitPlatform()
 }
+// Jacoco
+tasks.jacocoTestReport {
+    dependsOn(tasks.test) // tests are required to run before generating the report
+}
 
 //tasks.jar {
 //    manifest {
@@ -53,7 +59,7 @@ tasks.test {
 //    duplicatesStrategy = DuplicatesStrategy.INCLUDE
 //}
 
-// Para que funcione el shadowJar
+// shadowJar
 tasks.shadowJar {
     manifest {
         attributes["Main-Class"] = "server.Server"

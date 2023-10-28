@@ -65,3 +65,6 @@ a
 ,src/test/java/services/FunkoServiceTest.java,4\5\45e3d0315870856ca0e4e736be64f7e09feefd61
 9
 	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+:
+
+DockerFile,4\0\40f7331d8e28c3c74df3da70560f362ea1796985
