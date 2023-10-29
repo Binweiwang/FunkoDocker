@@ -3,12 +3,13 @@ FROM gradle:jdk17 AS build
 # Directorio de trabajo
 WORKDIR /app
 
-# Copia los archivos build.gradle y src de nuestro proyecto
+# Copia los archivos build.gradle.kts y src de nuestro proyecto
 COPY build.gradle.kts .
 COPY gradlew .
 COPY gradle gradle
 COPY src src
 COPY data data
+COPY cert cert
 
 # Podemos decirle que saque la documentación de los test (coverage)
 # RUN ./gradlew test jacocoTestReport
@@ -25,7 +26,10 @@ FROM openjdk:17-jdk AS run
 # Directorio de trabajo
 WORKDIR /app
 COPY src/main/resources/database.properties /app/src/main/resources/database.properties
+COPY src/main/resources/server.properties /app/src/main/resources/server.properties
+COPY src/main/resources/client.properties /app/src/main/resources/client.properties
 COPY data/* /app/data/
+COPY cert/* /app/cert/
 
 
 
@@ -33,7 +37,7 @@ COPY data/* /app/data/
 
 
 
-# Copia los archivos build.gradle y src de nuestro proyecto
+# Copia los archivos build.gradle.kts y src de nuestro proyecto
 
 # Copia el jar de la aplicación, ojo que esta en la etapa de compilación, etiquetado como build
 # Cuidado con la ruta definida cuando has copiado las cosas en la etapa de compilación

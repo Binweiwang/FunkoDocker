@@ -68,3 +68,12 @@ a
 :
 
 DockerFile,4\0\40f7331d8e28c3c74df3da70560f362ea1796985
+;
+gradlew.bat,2\a\2a45a911a8f1836b0b6c5b758962572012d8f8c3
+7
+gradlew,5\b\5bbfa66edb4db3c7c33c5181f43510990d3307f9
+:
+
+Dockerfile,6\6\6651ddff6eb82c840ced7c1dddee15c6e1913dd4
+X
+(gradle/wrapper/gradle-wrapper.properties,f\b\fbe448ebfc3eb2d4e308f6b8b043666f5b57235e

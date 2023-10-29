@@ -12,7 +12,8 @@ import java.util.Optional;
 public class UserRepository {
     // Atributos
     private static UserRepository instance;
-    private final List<User> users = List.of(new User(1, "pepe", BCrypt.hashpw("pepe1234", BCrypt.gensalt(12)), User.Role.ADMIN), new User(2, "ana", BCrypt.hashpw("ana1234", BCrypt.gensalt(12)), User.Role.USER));
+    private final List<User> users = List.of(new User(1, "pepe", BCrypt.hashpw("pepe1234", BCrypt.gensalt(12)), User.Role.ADMIN),
+            new User(2, "ana", BCrypt.hashpw("ana1234", BCrypt.gensalt(12)), User.Role.USER));
 
     /**
      * Constructor de repository de usuario

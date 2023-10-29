@@ -12,14 +12,19 @@ import org.slf4j.LoggerFactory;
 import utils.LocalDateAdapter;
 import utils.LocalDateTimeAdapter;
 
+import javax.net.ssl.SSLSocket;
+import javax.net.ssl.SSLSocketFactory;
 import java.io.*;
 import java.net.Socket;
 import java.nio.file.Paths;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.Arrays;
+import java.util.Map;
 import java.util.UUID;
 
 import static common.Request.Type.*;
+import static server.Server.readConfigFile;
 
 /**
  * Cliente para comunicar con el servidor
@@ -296,10 +301,23 @@ public class Client {
      * @throws IOException Excepción de entrada/salida
      */
     private void openConnection() throws IOException {
+        Map<String, String> myConfig = readConfigFile();
+
+        logger.debug("Cargando fichero de propiedades");
+        // System.setProperty("javax.net.debug", "ssl, keymanager, handshake"); // Debug
+        System.setProperty("javax.net.ssl.trustStore", myConfig.get("keyFile")); // llavero cliente
+        System.setProperty("javax.net.ssl.trustStorePassword", myConfig.get("keyPassword")); // clave
+
+        SSLSocketFactory clientFactory = (SSLSocketFactory) SSLSocketFactory.getDefault();
+        SSLSocket socket = (SSLSocket) clientFactory.createSocket(HOST, PORT);
+
+        // Opcionalmente podemos forzar el tipo de protocolo -> Poner el mismo que el cliente
+        logger.debug("Protocolos soportados: " + Arrays.toString(socket.getSupportedProtocols()));
+        socket.setEnabledCipherSuites(new String[]{"TLS_AES_128_GCM_SHA256"});
+        socket.setEnabledProtocols(new String[]{"TLSv1.3"});
 
         logger.debug("Abriendo conexión con el servidor: " + HOST + ":" + PORT);
 
-        socket = new Socket(HOST, PORT);
         out = new PrintWriter(socket.getOutputStream(), true);
         in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
         logger.debug("Conexión establecida con el servidor: " + HOST + ":" + PORT);
