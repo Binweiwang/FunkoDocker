@@ -82,8 +82,8 @@ public class Server {
     public static Map<String, String>   readConfigFile() {
         try {
             logger.debug("Leyendo el fichero de propiedades");
-            var pathFile = Paths.get("").toAbsolutePath() + File.separator + "src" + File.separator + "main" + File.separator + "resources" + File.separator + "server.properties";
-            PropertiesReader properties = new PropertiesReader(pathFile);
+
+            PropertiesReader properties = new PropertiesReader("server.properties");
 
             String keyFile = properties.getProperty("keyFile");
             String keyPassword = properties.getProperty("keyPassword");

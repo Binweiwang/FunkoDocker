@@ -75,3 +75,7 @@ C
 Dockerfile,6\6\6651ddff6eb82c840ced7c1dddee15c6e1913dd4
 X
 (gradle/wrapper/gradle-wrapper.properties,f\b\fbe448ebfc3eb2d4e308f6b8b043666f5b57235e
+Y
+)src/main/java/utils/PropertiesReader.java,d\7\d78fa8a9ef9785b1677bee4c01b64e284a525d59
+<
+cert/keys.sh,7\1\719ee068fa20fc08dd67199ba36c9aa6bfdfbe90

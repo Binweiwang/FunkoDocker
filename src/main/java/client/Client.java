@@ -89,11 +89,12 @@ public class Client {
             saveFunko(token, Funko.builder().cod(UUID.randomUUID()).nombre("Funko").modelo("MARVEL").precio(12.5).fecha_lanzamiento(LocalDate.now()).build());
             updateFunko(token, funko);
             deleteFunko(token, "1");
+            closeConnection();
+            System.exit(0);
         } catch (ClientException ex) {
             logger.debug("Error en el cliente: " + ex.getMessage());
             System.err.println("🔴 Error: " + ex.getMessage());
             closeConnection();
-            System.exit(1);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

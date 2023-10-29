@@ -1,119 +1,127 @@
 
-g	java:S112]"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ÃòÇ²¶1
-h	java:S112™"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ÃòÇ²¶1
-h	java:S112®"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ÃòÇ²¶1
-h	java:S112Á"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ÃòÇ²¶1
-h	java:S112Ô"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ÃòÇ²¶1
-h	java:S112ç"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ÃòÇ²¶1
-h	java:S112ù"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ÃòÇ²¶1
-h	java:S112“"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ÃòÇ²¶1
+g	java:S112c"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ÃòÇ²¶1
+h	java:S112Ÿ"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ÃòÇ²¶1
+h	java:S112´"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ÃòÇ²¶1
+h	java:S112Ç"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ÃòÇ²¶1
+h	java:S112Ú"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ÃòÇ²¶1
+h	java:S112í"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ÃòÇ²¶1
+h	java:S112ÿ"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ÃòÇ²¶1
+h	java:S112™"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ÃòÇ²¶1
 Q
-java:S3740@"/Provide the parametrized type for this generic.(¶œËÔûÿÿÿÿ8ÃòÇ²¶1
+java:S3740E"/Provide the parametrized type for this generic.(¶œËÔûÿÿÿÿ8ÃòÇ²¶1
 L
-java:S3740o"/Provide the parametrized type for this generic.(‡“º´8ÃòÇ²¶1
-Q
-java:S3740{"/Provide the parametrized type for this generic.(¯ÃØÍûÿÿÿÿ8ÃòÇ²¶1
+java:S3740u"/Provide the parametrized type for this generic.(‡“º´8ÃòÇ²¶1
 R
-java:S3740‘"/Provide the parametrized type for this generic.(ÅÄÈÿÿÿÿÿ8ÃòÇ²¶1
+java:S3740"/Provide the parametrized type for this generic.(¯ÃØÍûÿÿÿÿ8ÃòÇ²¶1
+R
+java:S3740—"/Provide the parametrized type for this generic.(ÅÄÈÿÿÿÿÿ8ÃòÇ²¶1
 M
-java:S3740•"/Provide the parametrized type for this generic.(‡“º´8ÃòÇ²¶1
+java:S3740›"/Provide the parametrized type for this generic.(‡“º´8ÃòÇ²¶1
 M
-java:S3740¦"/Provide the parametrized type for this generic.(Íé€ã8ÃòÇ²¶1
+java:S3740¬"/Provide the parametrized type for this generic.(Íé€ã8ÃòÇ²¶1
 M
-java:S3740ª"/Provide the parametrized type for this generic.(‡“º´8ÃòÇ²¶1
+java:S3740°"/Provide the parametrized type for this generic.(‡“º´8ÃòÇ²¶1
 M
-java:S3740½"/Provide the parametrized type for this generic.(‡“º´8ÃòÇ²¶1
+java:S3740Ã"/Provide the parametrized type for this generic.(‡“º´8ÃòÇ²¶1
 M
-java:S3740Ğ"/Provide the parametrized type for this generic.(‡“º´8ÓòÇ²¶1
+java:S3740Ö"/Provide the parametrized type for this generic.(‡“º´8ÓòÇ²¶1
 M
-java:S3740ã"/Provide the parametrized type for this generic.(‡“º´8ÓòÇ²¶1
+java:S3740é"/Provide the parametrized type for this generic.(‡“º´8ÓòÇ²¶1
 M
-java:S3740õ"/Provide the parametrized type for this generic.(‡“º´8ÓòÇ²¶1
+java:S3740û"/Provide the parametrized type for this generic.(‡“º´8ÓòÇ²¶1
 M
-java:S3740ˆ"/Provide the parametrized type for this generic.(‡“º´8ÓòÇ²¶1
+java:S3740"/Provide the parametrized type for this generic.(‡“º´8ÓòÇ²¶1
 Y
-java:S2629m"7Use the built-in formatting to construct this argument.(Ù‚€‰üÿÿÿÿ8ÓòÇ²¶1
+java:S2629s"7Use the built-in formatting to construct this argument.(Ù‚€‰üÿÿÿÿ8ÓòÇ²¶1
 T
-java:S2629p"7Use the built-in formatting to construct this argument.(º§âß8ÓòÇ²¶1
+java:S2629v"7Use the built-in formatting to construct this argument.(º§âß8ÓòÇ²¶1
 U
-java:S2629’"7Use the built-in formatting to construct this argument.(Ô›Š8ÓòÇ²¶1
+java:S2629˜"7Use the built-in formatting to construct this argument.(Ô›Š8ÓòÇ²¶1
 U
-java:S2629–"7Use the built-in formatting to construct this argument.(¥•¯é8ÓòÇ²¶1
+java:S2629œ"7Use the built-in formatting to construct this argument.(¥•¯é8ÓòÇ²¶1
 U
-java:S2629§"7Use the built-in formatting to construct this argument.(²Ó‹Ÿ8ÓòÇ²¶1
+java:S2629­"7Use the built-in formatting to construct this argument.(²Ó‹Ÿ8ÓòÇ²¶1
 T
-java:S2629«"7Use the built-in formatting to construct this argument.(šŞƒ8ÓòÇ²¶1
+java:S2629±"7Use the built-in formatting to construct this argument.(šŞƒ8ÓòÇ²¶1
 Z
-java:S2629º"7Use the built-in formatting to construct this argument.(†Ê­óÿÿÿÿÿ8ÓòÇ²¶1
+java:S2629À"7Use the built-in formatting to construct this argument.(†Ê­óÿÿÿÿÿ8ÓòÇ²¶1
 Z
-java:S2629¾"7Use the built-in formatting to construct this argument.(éÊ†£şÿÿÿÿ8ÓòÇ²¶1
+java:S2629Ä"7Use the built-in formatting to construct this argument.(éÊ†£şÿÿÿÿ8ÓòÇ²¶1
 Z
-java:S2629Í"7Use the built-in formatting to construct this argument.(ÛªĞ«ùÿÿÿÿ8ÓòÇ²¶1
+java:S2629Ó"7Use the built-in formatting to construct this argument.(ÛªĞ«ùÿÿÿÿ8ÓòÇ²¶1
 U
-java:S2629Ñ"7Use the built-in formatting to construct this argument.(¥Ë—Ç8ÓòÇ²¶1
+java:S2629×"7Use the built-in formatting to construct this argument.(¥Ë—Ç8ÓòÇ²¶1
 Z
-java:S2629à"7Use the built-in formatting to construct this argument.(ô©ÀÍıÿÿÿÿ8ÓòÇ²¶1
+java:S2629æ"7Use the built-in formatting to construct this argument.(ô©ÀÍıÿÿÿÿ8ÓòÇ²¶1
 Z
-java:S2629ä"7Use the built-in formatting to construct this argument.(“–óôÿÿÿÿÿ8ÓòÇ²¶1
+java:S2629ê"7Use the built-in formatting to construct this argument.(“–óôÿÿÿÿÿ8ÓòÇ²¶1
 U
-java:S2629ò"7Use the built-in formatting to construct this argument.(ö®Âª8ÓòÇ²¶1
+java:S2629ø"7Use the built-in formatting to construct this argument.(ö®Âª8ÓòÇ²¶1
 Z
-java:S2629ö"7Use the built-in formatting to construct this argument.(ÊŞºõüÿÿÿÿ8ÓòÇ²¶1
+java:S2629ü"7Use the built-in formatting to construct this argument.(ÊŞºõüÿÿÿÿ8ÓòÇ²¶1
 Z
-java:S2629‰"7Use the built-in formatting to construct this argument.(ÊŞºõüÿÿÿÿ8ÓòÇ²¶1
+java:S2629"7Use the built-in formatting to construct this argument.(ÊŞºõüÿÿÿÿ8ÓòÇ²¶1
+
+java:S2629¼"\Invoke method(s) only conditionally. Use the built-in formatting to construct this argument.(°™¡¥ùÿÿÿÿ8Æ¦ñã·1
+g
+java:S2095¹"DUse try-with-resources or close this "Socket" in a "finally" clause.(ı¹ÓØúÿÿÿÿ8å¦ñã·1
 v
-java:S1450$"TRemove the "token" field and declare it as a local variable in the relevant methods.(°É©ñÿÿÿÿÿ8¶Ÿ¸Íµ1
+java:S1450)"TRemove the "token" field and declare it as a local variable in the relevant methods.(°É©ñÿÿÿÿÿ8¶Ÿ¸Íµ1
 ^
-java:S34577"AFormat specifiers should be used instead of string concatenation.(¢ÿä¥8òòÇ²¶1
-G	java:S106A"+Replace this use of System.out by a logger.(ÙäÏó8‚óÇ²¶1
+java:S3457<"AFormat specifiers should be used instead of string concatenation.(¢ÿä¥8òòÇ²¶1
+G	java:S106F"+Replace this use of System.out by a logger.(ÙäÏó8‚óÇ²¶1
 c
-java:S3457X"AFormat specifiers should be used instead of string concatenation.(‚½«Âùÿÿÿÿ8òòÇ²¶1
-L	java:S106Y"+Replace this use of System.err by a logger.(Ø´è­ûÿÿÿÿ8‚óÇ²¶1
+java:S3457_"AFormat specifiers should be used instead of string concatenation.(‚½«Âùÿÿÿÿ8òòÇ²¶1
+L	java:S106`"+Replace this use of System.err by a logger.(Ø´è­ûÿÿÿÿ8‚óÇ²¶1
 c
-java:S3457m"AFormat specifiers should be used instead of string concatenation.(Ù‚€‰üÿÿÿÿ8‚óÇ²¶1
+java:S3457s"AFormat specifiers should be used instead of string concatenation.(Ù‚€‰üÿÿÿÿ8‚óÇ²¶1
 ^
-java:S3457p"AFormat specifiers should be used instead of string concatenation.(º§âß8‚óÇ²¶1
-9
-java:S6205}"Remove this redundant block.(»œšÍ8‚óÇ²¶1
-G	java:S106~"+Replace this use of System.out by a logger.(ÙäÏó8‘óÇ²¶1
+java:S3457v"AFormat specifiers should be used instead of string concatenation.(º§âß8‚óÇ²¶1
+:
+java:S6205ƒ"Remove this redundant block.(»œšÍ8‚óÇ²¶1
+H	java:S106„"+Replace this use of System.out by a logger.(ÙäÏó8‘óÇ²¶1
 ?
-java:S6205€"Remove this redundant block.(ß×ùÙıÿÿÿÿ8‚óÇ²¶1
-M	java:S106"+Replace this use of System.err by a logger.(Ş®ôàøÿÿÿÿ8‚óÇ²¶1
+java:S6205†"Remove this redundant block.(ß×ùÙıÿÿÿÿ8‚óÇ²¶1
+M	java:S106‡"+Replace this use of System.err by a logger.(Ş®ôàøÿÿÿÿ8‚óÇ²¶1
 [
-java:S1117"8Rename "gson" which hides the field declared at line 32.(¡áÌÒøÿÿÿÿ8‚óÇ²¶1
+java:S1117”"8Rename "gson" which hides the field declared at line 37.(¡áÌÒøÿÿÿÿ8‚óÇ²¶1
 _
-java:S3457’"AFormat specifiers should be used instead of string concatenation.(Ô›Š8‚óÇ²¶1
+java:S3457˜"AFormat specifiers should be used instead of string concatenation.(Ô›Š8‚óÇ²¶1
 _
-java:S3457–"AFormat specifiers should be used instead of string concatenation.(¥•¯é8‚óÇ²¶1
+java:S3457œ"AFormat specifiers should be used instead of string concatenation.(¥•¯é8‚óÇ²¶1
 [
-java:S1117£"8Rename "gson" which hides the field declared at line 32.(¡áÌÒøÿÿÿÿ8‚óÇ²¶1
+java:S1117©"8Rename "gson" which hides the field declared at line 37.(¡áÌÒøÿÿÿÿ8‚óÇ²¶1
 _
-java:S3457§"AFormat specifiers should be used instead of string concatenation.(²Ó‹Ÿ8‚óÇ²¶1
+java:S3457­"AFormat specifiers should be used instead of string concatenation.(²Ó‹Ÿ8‚óÇ²¶1
 ^
-java:S3457«"AFormat specifiers should be used instead of string concatenation.(šŞƒ8‚óÇ²¶1
+java:S3457±"AFormat specifiers should be used instead of string concatenation.(šŞƒ8‚óÇ²¶1
 d
-java:S3457º"AFormat specifiers should be used instead of string concatenation.(†Ê­óÿÿÿÿÿ8‚óÇ²¶1
+java:S3457À"AFormat specifiers should be used instead of string concatenation.(†Ê­óÿÿÿÿÿ8‚óÇ²¶1
 d
-java:S3457¾"AFormat specifiers should be used instead of string concatenation.(éÊ†£şÿÿÿÿ8‚óÇ²¶1
+java:S3457Ä"AFormat specifiers should be used instead of string concatenation.(éÊ†£şÿÿÿÿ8‚óÇ²¶1
 d
-java:S3457Í"AFormat specifiers should be used instead of string concatenation.(ÛªĞ«ùÿÿÿÿ8‚óÇ²¶1
+java:S3457Ó"AFormat specifiers should be used instead of string concatenation.(ÛªĞ«ùÿÿÿÿ8‚óÇ²¶1
 _
-java:S3457Ñ"AFormat specifiers should be used instead of string concatenation.(¥Ë—Ç8‚óÇ²¶1
+java:S3457×"AFormat specifiers should be used instead of string concatenation.(¥Ë—Ç8‚óÇ²¶1
 d
-java:S3457à"AFormat specifiers should be used instead of string concatenation.(ô©ÀÍıÿÿÿÿ8‚óÇ²¶1
+java:S3457æ"AFormat specifiers should be used instead of string concatenation.(ô©ÀÍıÿÿÿÿ8‚óÇ²¶1
 d
-java:S3457ä"AFormat specifiers should be used instead of string concatenation.(“–óôÿÿÿÿÿ8‘óÇ²¶1
+java:S3457ê"AFormat specifiers should be used instead of string concatenation.(“–óôÿÿÿÿÿ8‘óÇ²¶1
 _
-java:S3457ò"AFormat specifiers should be used instead of string concatenation.(ö®Âª8‘óÇ²¶1
+java:S3457ø"AFormat specifiers should be used instead of string concatenation.(ö®Âª8‘óÇ²¶1
 d
-java:S3457ö"AFormat specifiers should be used instead of string concatenation.(ÊŞºõüÿÿÿÿ8‘óÇ²¶1
-M	java:S106…"+Replace this use of System.out by a logger.(°•¢šûÿÿÿÿ8‘óÇ²¶1
+java:S3457ü"AFormat specifiers should be used instead of string concatenation.(ÊŞºõüÿÿÿÿ8‘óÇ²¶1
+M	java:S106‹"+Replace this use of System.out by a logger.(°•¢šûÿÿÿÿ8‘óÇ²¶1
 d
-java:S3457‰"AFormat specifiers should be used instead of string concatenation.(ÊŞºõüÿÿÿÿ8‘óÇ²¶1
-M	java:S106Œ"+Replace this use of System.out by a logger.(‹‰ÆÁûÿÿÿÿ8‘óÇ²¶1
-H	java:S106"+Replace this use of System.err by a logger.(Íõ·¤8‘óÇ²¶1
-M	java:S106Ÿ"+Replace this use of System.out by a logger.(æüşÊùÿÿÿÿ8–ìüµ¶1
+java:S3457"AFormat specifiers should be used instead of string concatenation.(ÊŞºõüÿÿÿÿ8‘óÇ²¶1
+M	java:S106’"+Replace this use of System.out by a logger.(‹‰ÆÁûÿÿÿÿ8‘óÇ²¶1
+H	java:S106•"+Replace this use of System.err by a logger.(Íõ·¤8‘óÇ²¶1
+M	java:S106¥"+Replace this use of System.out by a logger.(æüşÊùÿÿÿÿ8–ìüµ¶1
+]
+java:S1117¹":Rename "socket" which hides the field declared at line 38.(ı¹ÓØúÿÿÿÿ8Ş­ğã·1
+d
+java:S3457¼"AFormat specifiers should be used instead of string concatenation.(°™¡¥ùÿÿÿÿ8—§ñã·1
 M
-java:S1128"0Remove this unused import 'java.nio.file.Paths'.(áè°¯8˜ê„¶¶1
+java:S1128"0Remove this unused import 'java.nio.file.Paths'.(áè°¯8•òã·1
 T
-java:S1144@"2Remove this unused private "funkoResponse" method.(¶œËÔûÿÿÿÿ8‘óÇ²¶1
+java:S1144E"2Remove this unused private "funkoResponse" method.(¶œËÔûÿÿÿÿ8‘óÇ²¶1

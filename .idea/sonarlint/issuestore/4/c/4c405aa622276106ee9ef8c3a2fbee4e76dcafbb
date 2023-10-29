@@ -1,8 +1,32 @@
 
-g	java:S112."FDefine and throw a dedicated exception instead of using a generic one.(ò˜“şÿÿÿÿ8úŞ¿º·1
-L	java:S106#"+Replace this use of System.out by a logger.(ŸäîÓùÿÿÿÿ8»á¿º·1
-L	java:S106&"+Replace this use of System.out by a logger.(ëñÈùÿÿÿÿ8Úá¿º·1
+g	java:S112M"FDefine and throw a dedicated exception instead of using a generic one.(ò˜“şÿÿÿÿ8ï²°ã·1
+e
+java:S11925"HDefine a constant instead of duplicating this literal "keyFile" 3 times.(æ¡8¦Ë®ã·1
+n
+java:S11926"LDefine a constant instead of duplicating this literal "keyPassword" 3 times.(ëÉé‚üÿÿÿÿ8ï²°ã·1
+y
+java:S2629>"\Invoke method(s) only conditionally. Use the built-in formatting to construct this argument.(µ‡¦8ÛÃµã·1
+c
+java:S22595"FA "NullPointerException" could be thrown; "myConfig" is nullable here.(æ¡8Ç«‚æ·1
+l
+java:S2095;"JUse try-with-resources or close this "ServerSocket" in a "finally" clause.(¿Ò‹ôùÿÿÿÿ8Ç«‚æ·1
+^
+java:S3457>"AFormat specifiers should be used instead of string concatenation.(µ‡¦8æÃµã·1
+L	java:S106B"+Replace this use of System.out by a logger.(ŸäîÓùÿÿÿÿ8ş²°ã·1
+L	java:S106E"+Replace this use of System.out by a logger.(ëñÈùÿÿÿÿ8ş²°ã·1
+c
+java:S3457o"AFormat specifiers should be used instead of string concatenation.(ëú•Áüÿÿÿÿ8ş²°ã·1
+F
+java:S1168q"$Return an empty map instead of null.(èš‚¤ùÿÿÿÿ8ş²°ã·1
+^
+java:S3457s"AFormat specifiers should be used instead of string concatenation.(é·æı8ş²°ã·1
+A
+java:S1168t"$Return an empty map instead of null.(¥¹ï8ş²°ã·1
+F
+java:S1128")Remove this unused import 'java.io.File'.(†Ğ¥Å8Ö«‚æ·1
+T
+java:S1128"2Remove this unused import 'java.net.ServerSocket'.(ĞúÙÿÿÿÿÿ8Ö«‚æ·1
 M
-java:S1068"0Remove this unused "funkoService" private field.(¦©ıÿ8úá¿º·1
-G
-java:S1068"*Remove this unused "logger" private field.(²ù®Ù8úá¿º·1
+java:S1128"0Remove this unused import 'java.nio.file.Paths'.(áè°¯8Ö«‚æ·1
+M
+java:S1068#"0Remove this unused "funkoService" private field.(¦©ıÿ8ş²°ã·1
